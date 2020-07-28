@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Authentication
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+# Assets
+gem 'inline_svg', '~> 1.7', '>= 1.7.1'
+
 # Security
 gem 'devise-pwned_password', '~> 0.1.8'
 
