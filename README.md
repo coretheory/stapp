@@ -1,24 +1,11 @@
-# README
+# SARATHAYER
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Designer and consultant for the professional architecture, gaming, graphics, technology, and web industries.
 
-Things you may want to cover:
+## Gems
 
-* Ruby version
+#### Devise
 
-* System dependencies
+#### Devise-pwned_password
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Pg
