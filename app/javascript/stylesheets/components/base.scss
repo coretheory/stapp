@@ -1,0 +1,17 @@
+/* Base */
+
+body {
+	@apply font-sans text-base leading-normal;
+}
+
+a {
+  @apply text-white;
+}
+
+a:active {
+  color: inherit;
+}
+
+.heading {
+  @apply font-sans font-medium text-gray-800;
+}
