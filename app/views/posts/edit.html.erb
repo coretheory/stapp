@@ -1,6 +1,11 @@
-<h1>Editing Post</h1>
+<% content_for :primary_content do %>
+	<h1>Editing Post</h1>
+	<%= render 'form', post: @post %>
+<% end %>
 
-<%= render 'form', post: @post %>
+<% content_for :secondary_content do %>
+  <%= link_to 'Show', @post %> |
+	<%= link_to 'Back', posts_path %>
+<% end %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<%= render "basic_layout" %>

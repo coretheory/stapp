@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
+<% content_for :primary_content do %>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @post.title %>
+	</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+	<p>
+	  <strong>Body:</strong>
+	  <%= @post.body %>
+	</p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @post.url %>
-</p>
+	<p>
+	  <strong>Url:</strong>
+	  <%= @post.url %>
+	</p>
+<% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<% content_for :secondary_content do %>
+	<%= link_to 'Edit', edit_post_path(@post) %> |
+	<%= link_to 'Back', posts_path %>
+<% end %>
+
+<%= render "basic_layout" %>
