@@ -38,7 +38,7 @@ div.content {
 /* Dropdowns */
 .dropdown {
   position: relative;
-  min-width: 220px;
+  min-width: 100%;
   z-index: 2;
 
   .dropdown-target {
@@ -49,12 +49,12 @@ div.content {
     }
   }
 
-  .dropdown-menu {
+  .dropdown-list {
     background: white;
     top: 34px;
-    left: -1;
+    left: 0;
     z-index: 1;
-    width: 100%;
+    min-width: 100%;
     position: absolute;
 
     a:hover svg {
