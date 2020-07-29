@@ -53,4 +53,37 @@ div.content {
     text-align: center;
     float: none;
   }
-} 
+}
+
+/* Dropdowns */
+.dropdown {
+  position: relative;
+  min-width: 180px;
+  z-index: 2;
+
+  .dropdown-target {
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid #dae1e7;
+    }
+  }
+
+  .dropdown-menu {
+    background: white;
+    top: 37px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+
+    a:hover svg {
+      fill: white;
+    }
+
+    li:last-of-type a {
+      border-bottom-right-radius: .25rem;
+      border-bottom-left-radius: .25rem;
+    }
+  }
+}

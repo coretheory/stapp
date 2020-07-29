@@ -11,22 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="mb-6">
+    <%= form.label :header_image, class: "label" %>
+    <%= form.file_field :header_image, class: "input" %>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.rich_text_area :body %>
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
   </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
+  <div class="mb-6">
+    <%= form.label :body, class: "label" %>
+    <%= form.rich_text_area :body, class: "input" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="mb-6">
+    <%= form.label :url, class: "label" %>
+    <%= form.text_field :url, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :uploads, class: "label" %>
+    <%= form.file_field :uploads, multiple: true, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.submit class: "btn btn-black" %>
   </div>
 <% end %>

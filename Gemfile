@@ -11,11 +11,12 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-gem 'image_processing', '~> 1.2'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+# Active Storage
+gem 'activestorage-office-previewer', '~> 0.1.2'
+gem 'image_processing', '~> 1.2'
 
 # Authentication
 gem 'devise', '~> 4.7', '>= 4.7.2'
@@ -23,6 +24,7 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 

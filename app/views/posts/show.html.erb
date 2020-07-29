@@ -1,25 +1,48 @@
 <% content_for :primary_content do %>
 	<p id="notice"><%= notice %></p>
 
-	<p>
-	  <strong>Title:</strong>
-	  <%= @post.title %>
-	</p>
+	<%= image_tag @post.header_image %>
 
-	<p>
-	  <strong>Body:</strong>
-	  <%= @post.body %>
-	</p>
+	<div class="p-4 pb-10 pr-6">
+    <div class="flex flex-row flex-wrap items-start justify-between">
 
-	<p>
-	  <strong>Url:</strong>
-	  <%= @post.url %>
-	</p>
+      <div class="post-content">
+        <%= render 'posted_by', post: @post %>
+
+        <h1 class="text-xl"><%= @post.title %></h1>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5">
+          <%= @post.body %>
+        </div>
+
+        <div>
+          <% @post.uploads.each do |upload| %>
+            <% if upload.variable? %>
+              <%= image_tag upload.variant(resize_to_fill) %>
+            <% elsif upload.previewable? %>
+              <%= link_to image_tag(upload.preview(resize_to_fill)), rails_blob_path(upload, disposition: attachment) %>
+            <% end %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 <% end %>
 
 <% content_for :secondary_content do %>
-	<%= link_to 'Edit', edit_post_path(@post) %> |
-	<%= link_to 'Back', posts_path %>
+	<% if user_signed_in? && current_user.id == @post.user_id  %>
+    <div class="pt-2 flex flex-wrap items-center">
+      <%= link_to edit_post_path(@post), class:"no-underline mr-2" do %>
+        <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
+      <% end %>
+
+      <%= link_to @post, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
+        <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
 
 <%= render "basic_layout" %>

@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_many :posts
 
+  has_one_attached :avatar
+
   validates_uniqueness_of :username
   validates_presence_of :username
 end
