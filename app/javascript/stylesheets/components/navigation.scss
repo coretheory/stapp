@@ -9,26 +9,6 @@
   overflow: auto;
 }
 
-/* Sidebar links */
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
-
-/* Active/current link */
-.sidebar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 div.content {
   margin-left: 20%;
@@ -58,7 +38,7 @@ div.content {
 /* Dropdowns */
 .dropdown {
   position: relative;
-  min-width: 180px;
+  min-width: 220px;
   z-index: 2;
 
   .dropdown-target {
@@ -71,8 +51,8 @@ div.content {
 
   .dropdown-menu {
     background: white;
-    top: 37px;
-    left: 0;
+    top: 34px;
+    left: -1;
     z-index: 1;
     width: 100%;
     position: absolute;
