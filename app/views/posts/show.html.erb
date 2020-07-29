@@ -20,7 +20,9 @@
             <% if upload.variable? %>
               <%= image_tag upload.variant(resize_to_fill) %>
             <% elsif upload.previewable? %>
-              <%= link_to image_tag(upload.preview(resize_to_fill)), rails_blob_path(upload, disposition: attachment) %>
+              <%= link_to image_tag(upload.preview(resize: "100x100")), rails_blob_path(upload, disposition: attachment) %>
+            <% else %>
+              <%= link_to upload.filename, rails_blob_path(upload) %>
             <% end %>
           <% end %>
         </div>
