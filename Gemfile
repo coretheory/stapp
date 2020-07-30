@@ -24,7 +24,7 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+# gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 

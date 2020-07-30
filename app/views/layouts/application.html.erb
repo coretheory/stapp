@@ -8,6 +8,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= tag.meta name: "direct-upload-url", content: rails_direct_uploads_path %>
   </head>
 
   <body class="relative h-screen overflow-x-hidden">
@@ -60,6 +62,11 @@
               </div>
             </div>
           <% end %>
+          
+          <div class="text-center mt-5 items-center">
+            <%= link_to "PROJECTS", projects_path, class: "text-black" %>
+          </div>
+
         </div>
       </div>
 

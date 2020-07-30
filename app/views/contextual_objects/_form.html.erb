@@ -1,0 +1,56 @@
+<%= form_with(model: contextual_object, local: true) do |form| %>
+  <% if contextual_object.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contextual_object.errors.count, "error") %> prohibited this contextual_object from being saved:</h2>
+
+      <ul>
+        <% contextual_object.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-6" data-uppy="contextual_object[header_image]">
+    <%= form.label :header_image, class: "label" %>
+    <div>
+      <% if @contextual_object.header_image.attached? %>
+        <%= image_tag @contextual_object.header_image, width: 280, data: { behavior: 'uppy-preview' } %>
+      <% else %>
+        <img src="" alt data-behavior="uppy-preview" />
+      <% end %>
+    </div>
+
+    <%= link_to "Upload", "#", data: { behavior: 'uppy-trigger'} %>
+  </div>
+
+  <div class="mb-6" data-uppy="contextual_object[footer_image]">
+    <%= form.label :footer_image, class: "label" %>
+    <div>
+      <% if @contextual_object.footer_image.attached? %>
+        <%= image_tag @contextual_object.footer_image, width: 280, data: { behavior: 'uppy-preview' } %>
+      <% else %>
+        <img src="" alt data-behavior="uppy-preview" />
+      <% end %>
+    </div>
+
+    <%= link_to "Upload", "#", data: { behavior: 'uppy-trigger'} %>
+  </div>
+
+    <div class="mb-6" data-uppy="contextual_object[body_images]">
+    <%= form.label :body_images, class: "label" %>
+    <div>
+      <% if @contextual_object.body_images.attached? %>
+        <%= image_tag @contextual_object.body_images, width: 280, data: { behavior: 'uppy-preview' } %>
+      <% else %>
+        <img src="" alt data-behavior="uppy-preview" />
+      <% end %>
+    </div>
+
+    <%= link_to "Upload", "#", data: { behavior: 'uppy-trigger'} %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.submit class: "btn btn-black" %>
+  </div>
+<% end %>

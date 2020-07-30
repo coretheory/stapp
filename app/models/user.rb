@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :pwned_password
 
   has_many :posts
+  has_many :projects
 
   has_one_attached :avatar
 

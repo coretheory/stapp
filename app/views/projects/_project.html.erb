@@ -1,0 +1,26 @@
+<div class="border-b border-r border-l">
+  <div class="px-2 pt-2 pb-2 flex items-center flex-wrap">
+
+    <% if project.header_image.attached? %>
+      <%= link_to image_tag(project.header_image.variant(resize_to_fill: [600, 300])), project %>
+    <% end %>
+
+
+    <div class="pl-4">
+      <h2 class="mb-1 flex flex-wrap items-center text-xl"><%= link_to project.title, project, class:"no-underline" %></h3>
+
+      <div class="text-sm text-gray-700"><%= project.intro %></div>
+      <% if user_signed_in? && current_user.id == project.user_id  %>
+        <div class="pt-2 flex flex-wrap items-center">
+          <%= link_to edit_project_path(project), class:"no-underline mr-2" do %>
+            <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
+          <% end %>
+
+          <%= link_to project, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
+            <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

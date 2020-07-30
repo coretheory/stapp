@@ -1,14 +1,15 @@
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
+      <h2 class="text-sm heading text-red-500"><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-        <% post.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
+      <ul class="text-sm mt-2 text-red-500 pl-4">
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
+
   <% end %>
 
   <div class="mb-6">

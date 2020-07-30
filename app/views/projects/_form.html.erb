@@ -1,0 +1,68 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
+      <h2 class="text-sm heading text-red-500"><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul class="text-sm mt-2 text-red-500 pl-4 list-disc">
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+  <div class="mb-6" data-uppy="project[header_image]">
+    <%= form.label :header_image, class: "label" %>
+    <%= form.file_field :header_image, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :title, class: "label" %>
+    <%= form.text_field :title, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :year, class: "label" %>
+    <%= form.text_field :year, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :project_type, class: "label" %>
+    <%= form.text_field :project_type, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :project_team, class: "label" %>
+    <%= form.rich_text_area :project_team, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :intro, class: "label" %>
+    <%= form.rich_text_area :intro, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :body, class: "label" %>
+    <%= form.rich_text_area :body, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :outro, class: "label" %>
+    <%= form.rich_text_area :outro, class: "input" %>
+  </div>
+
+  <div class="mb-6" data-uppy="project[header_image]">
+    <%= form.label :footer_image, class: "label" %>
+    <%= form.file_field :footer_image, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :body_images, class: "label" %>
+    <%= form.file_field :body_images, multiple: true, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.submit "Add project", class: "btn btn-black" %>
+  </div>
+<% end %>

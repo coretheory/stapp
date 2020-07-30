@@ -1,0 +1,45 @@
+<% content_for :primary_content do %>
+
+	<% if @project.header_image.attached? %>
+    <%= image_tag @project.header_image %>
+  <% end %>
+
+	<div class="p-4 pb-10 pr-6">
+    <div class="flex flex-row flex-wrap items-start justify-between">
+
+      <div class="project-content">
+        <%= render 'project_by', project: @project %>
+
+        <h1 class="text-xl"><%= @project.title %></h1>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5">
+          <%= @project.intro %>
+        </div>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5">
+          <%= @project.body %>
+        </div>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5">
+          <%= @project.outro %>
+        </div>
+
+        <div class="row">
+          <% @project.body_images.each do |image| %>
+            <% if image.variable? %>
+              <%= image_tag image.variant(resize_to_fit: [400, 600]) %>
+            <% elsif image.previewable? %>
+              <%= link_to image_tag(image.preview(resize_to_fit: "100x100")), rails_blob_path(image, disposition: attachment) %>
+            <% else %>
+              <%= link_to image.filename, rails_blob_path(image) %>
+            <% end %>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
+<%= render "project_layout" %>
