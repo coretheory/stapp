@@ -5,16 +5,16 @@
   </head>
 
   <body class="relative h-screen overflow-x-hidden">
-    
-    <%= render "shared/notices" %>   
-    <%= render "shared/navbar" %>
+    <div data-behavior="vue">
+      <%= render "shared/notices" %>   
+      <%= render "shared/navbar" %>
 
-    
-    <div class="content">
-      <%= content_for?(:content) ? yield(:content) : yield %>
+      
+      <div class="content">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </div>
+
+      <%= render "shared/footer" %>
     </div>
-
-    <%= render "shared/footer" %>
-
   </body>
 </html>

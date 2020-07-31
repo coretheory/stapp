@@ -11,7 +11,6 @@ require("trix")
 require("@rails/actiontext")
 
 import "stylesheets/application"
-import "components/dropdown"
 import "components/direct_uploads"
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -19,3 +18,18 @@ import "components/direct_uploads"
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import TurbolinksAdapter from 'vue-turbolinks'
+import Vue from 'vue/dist/vue.esm'
+import App from '../app.vue'
+
+Vue.use(TurbolinksAdapter)
+
+import Dropdown from '../components/dropdown'
+Vue.component('dropdown', Dropdown)
+
+document.addEventListener('turbolinks:load', () => {
+ const app = new Vue({
+   el: "[data-behavior='vue']",
+ })
+})
