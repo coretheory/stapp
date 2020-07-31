@@ -1,0 +1,8 @@
+<div class="flex flex-wrap justify-between">
+  <div class="leading-tight font-weight-light text-3xl">
+  <%= @project.subtitle.split(' ').first.upcase if @project.subtitle.present? %>
+  </div>
+  <div class="leading-tight font-weight-light text-3xl">
+  <%= @project.subtitle.split(' ').last.upcase if @project.subtitle.present? %>
+  </div>
+</div>

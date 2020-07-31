@@ -15,3 +15,8 @@ a:active {
 .heading {
   @apply font-sans font-medium text-gray-800;
 }
+
+.vertical-line-project {
+	border-left: .1rem solid gray;
+	height: 12rem;
+}

@@ -12,14 +12,24 @@
 
   <% end %>
 
-  <div class="mb-6" data-uppy="project[header_image]">
+  <div class="mb-6">
     <%= form.label :header_image, class: "label" %>
-    <%= form.file_field :header_image, class: "input" %>
-  </div>
+    <div class="mb-6">
+      <% if @project.header_image.attached? %>
+        <%= image_tag @project.header_image.representation(resize_to_fit: [200, 200]) %>
+      <% end %>
+    </div>
+    <%= form.file_field :header_image, direct_upload: true %>
+  </div>   
 
   <div class="mb-6">
     <%= form.label :title, class: "label" %>
     <%= form.text_field :title, class: "input" %>
+  </div>
+
+  <div class="mb-6">
+    <%= form.label :subtitle, class: "label" %>
+    <%= form.text_field :subtitle, class: "input" %>
   </div>
 
   <div class="mb-6">
@@ -52,17 +62,29 @@
     <%= form.rich_text_area :outro, class: "input" %>
   </div>
 
-  <div class="mb-6" data-uppy="project[header_image]">
+  <div class="mb-6">
     <%= form.label :footer_image, class: "label" %>
-    <%= form.file_field :footer_image, class: "input" %>
-  </div>
-
+    <div class="mb-6">
+      <% if @project.footer_image.attached? %>
+        <%= image_tag @project.footer_image.representation(resize_to_fit: [200, 200]) %>
+      <% end %>
+    </div>
+    <%= form.file_field :footer_image, direct_upload: true %>
+  </div>   
+  
   <div class="mb-6">
     <%= form.label :body_images, class: "label" %>
-    <%= form.file_field :body_images, multiple: true, class: "input" %>
+    <div class="mb-6 flex flex-wrap justify-between">
+      <% if @project.body_images.attached? %>
+        <% @project.body_images.each do |body_image| %>
+          <%= image_tag body_image.representation(resize_to_fit: [200, 200]) %>
+        <% end %>
+      <% end %>
+    </div>
+    <%= form.file_field :body_images, multiple: true, direct_upload: true %>
   </div>
 
   <div class="mb-6">
-    <%= form.submit "Add project", class: "btn btn-black" %>
+    <%= form.submit class: "btn btn-black" %>
   </div>
 <% end %>

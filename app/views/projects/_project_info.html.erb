@@ -1,0 +1,41 @@
+<div class="leading-normal pt-4 pb-6 text-2xl text-center m-auto my-2 mr-5 pr-12 ml-0 pl-0">
+          <%= "Project info".upcase %>
+</div>
+
+<div class="flex flex-row flex-wrap justify-center align-items-center pb-8">
+
+  <div class="flex flex-wrap flex-row justify-center" style="flex-direction: column;">
+    
+    <div class="flex-auto leading-normal text-base text-left pb-6">
+      Project Year
+    </div>
+
+    <div class="flex-auto leading-normal text-base text-left pb-8">
+      Project Team
+    </div>
+
+    <div class="flex-auto leading-normal text-base text-left pt-8 pb-6">
+      Project Type
+    </div>
+
+  </div>
+  
+  <div class="vertical-line-project mx-6 flex justify-center" style="justify-content: space-around; align-items: center; justify-content: center;"></div>
+  
+  <div class="flex flex-wrap flex-row justify-center" style="flex-direction: column;">
+
+    <div class="flex-auto leading-normal text-base text-left pb-6">
+      <%= @project.year %>
+    </div>
+
+    <div class="flex-auto leading-normal text-base text-left pb-8">
+      <%= @project.project_team %>
+    </div>
+
+    <div class="flex-auto leading-normal text-base text-left pt-4 pb-6">
+      <%= @project.project_type %>
+    </div>
+
+  </div>
+
+</div>

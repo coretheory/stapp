@@ -5,33 +5,61 @@
   <% end %>
 
 	<div class="p-4 pb-10 pr-6">
-    <div class="flex flex-row flex-wrap items-start justify-between">
+    <div class="flex flex-row flex-wrap items-center justify-between" style="justify-content: center; align-items: center;">
 
-      <div class="project-content">
+      <div class="text-center justify-center">
         <%= render 'project_by', project: @project %>
+        
+        <div class="flex flex-wrap w-full text-center justify-center align-items-center mr-5 pr-8 ml-0 pl-0">
+          <div class="leading-loose text-center m-auto pb-6 pt-8 my-2 mr-5 pr-8 ml-0 pl-0">
+            <div class="leading-tight xl:text-6xl lg:text-6xl md:text-2xl sm:text-xl xs:text-lg text-center">
+            <%= @project.title.upcase %>
+            </div>
+            <hr class="leading-tight">
+            <%= render 'subtitle', project: @project %>
+          </div>
+        </div>
 
-        <h1 class="text-xl"><%= @project.title %></h1>
+        <%= render 'project_info', project: @project %>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5">
+        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.intro %>
         </div>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5">
+        <div class="flex flex-wrap flex-row m-auto">
+          <% if @project.body_images[0..1] %>
+            <% @project.body_images[0..1].each do |body_image| %>
+              <% if body_image.variable? %>
+                <%= image_tag body_image.variant(resize_to_fit: [400, 600]) %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.body %>
         </div>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5">
+        <div class="flex flex-wrap flex-row m-auto">
+          <% if @project.body_images[2..5] %>
+            <% @project.body_images[2..5].each do |body_image| %>
+              <% if body_image.variable? %>
+                <%= image_tag body_image.variant(resize_to_fit: [400, 600]) %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.outro %>
         </div>
 
-        <div class="row">
-          <% @project.body_images.each do |image| %>
-            <% if image.variable? %>
-              <%= image_tag image.variant(resize_to_fit: [400, 600]) %>
-            <% elsif image.previewable? %>
-              <%= link_to image_tag(image.preview(resize_to_fit: "100x100")), rails_blob_path(image, disposition: attachment) %>
-            <% else %>
-              <%= link_to image.filename, rails_blob_path(image) %>
+        <div class="flex flex-wrap flex-row m-auto">
+          <% if @project.body_images[6..9] %>
+            <% @project.body_images[6..9].each do |body_image| %>
+              <% if body_image.variable? %>
+                <%= image_tag body_image.variant(resize_to_fit: [400, 600]) %>
+              <% end %>
             <% end %>
           <% end %>
         </div>
@@ -39,6 +67,10 @@
       </div>
     </div>
   </div>
+
+  <% if @project.footer_image.attached? %>
+    <%= image_tag @project.footer_image %>
+  <% end %>
 
 <% end %>
 
