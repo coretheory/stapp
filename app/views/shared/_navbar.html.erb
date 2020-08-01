@@ -7,16 +7,16 @@
       </div>
 
       <dropdown>
-        <%= link_to "#", slot: "link", class: "hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
+        <%= link_to "#", slot: "link", class: "block lg:inline-block hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
           <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
         <% end %>
 
-      <div slot="dropdown-items" class="px-2 pt-2 pb-4">
-        <%= link_to 'About'.upcase, root_path, class: "block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-        <%= link_to 'Gallery'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-        <%= link_to 'Projects'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-        <%= link_to 'Contact'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-      </div>
+        <div slot="dropdown-items" class="bg-white shadow rounded border overflow-hidden right-1 left-auto">
+          <%= link_to 'About'.upcase, root_path, class: "block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+          <%= link_to 'Gallery'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+          <%= link_to 'Projects'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+          <%= link_to 'Contact'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+        </div>
 
       </dropdown>
     </div>
@@ -25,12 +25,12 @@
       <% if user_signed_in? %>
         <dropdown>
 
-          <%= link_to "#", slot: "link", class: "no-underline flex justify-between text-gray-700 uppercase text-xs tracking-wide items-center font-semibold" do %>
+          <%= link_to "#", slot: "link", class: "no-underline flex justify-between w-400 text-gray-700 uppercase text-xs tracking-wide items-center font-semibold" do %>
             <%= current_user.username  if current_user.username %>
             <%= render_svg 'icons/chevron-down' %>
           <% end %>
 
-          <div slot="dropdown-items" class="absolute pin-l rounded-b border border-gray-500 shadow hover:text-white">
+          <div slot="dropdown-items" class="bg-white rounded-b border border-gray-500 shadow overflow-hidden">
             <h5 class="mt-2 uppercase text-xs text-gray-500 font-normal py-2 pl-3 tracking-wide">My Stuff</h5>
             <%= link_to profile_path(current_user), class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 flex items-center text-sm" do %>
               <%= render_svg 'icons/person-badge', styles: "icon-md fill-current mr-3" %> My Profile
@@ -47,13 +47,15 @@
       <% end %>
     </div>
 
-    </div>
+    
 
     <div class="w-full flex flex-wrap items-center justify-center px-4 py-2">
       
       <div class="text-center mt-5 items-center">
         <%= link_to "PROJECTS", projects_path, class: "text-black" %>
       </div>
+
+    </div>
 
     </div>
 </div>
