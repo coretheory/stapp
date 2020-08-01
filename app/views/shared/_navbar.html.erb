@@ -1,47 +1,26 @@
+<div class="flex justify-between py-2 px-4">
+  <%= link_to 'Sara Thayer'.upcase, root_path, class: "md:hidden bg-yellow-500 hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
 
-    <div class="flex justify-between py-2 px-4">
-      <%= link_to 'Sara Thayer'.upcase, root_path, class: "bg-yellow-500 hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
+  <dropdown>
+    <%= link_to "#", slot: "link", class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
+      <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
+    <% end %>
 
-      <dropdown>
-        <%= link_to "#", slot: "link", class: "bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
-          <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
-        <% end %>
-
-        <div slot="dropdown-items" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white border overflow-hidden">
-          <%= link_to 'About'.upcase, root_path, class: "block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-          <%= link_to 'Gallery'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-          <%= link_to 'Projects'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-          <%= link_to 'Contact'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
-        </div>
-
-      </dropdown>
+    <div slot="dropdown-items" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white border overflow-hidden">
+      <%= link_to 'About'.upcase, root_path, class: "block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+      <%= link_to 'Gallery'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+      <%= link_to 'Projects'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
+      <%= link_to 'Contact'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
     </div>
-    
-      <% if user_signed_in? %>
-        <dropdown>
-          <%= link_to "#", slot: "link", class: "flex justify-between bg-purple-500 no-underline text-gray-700 uppercase text-xs tracking-wide items-center font-semibold mx-1 py-1 rounded" do %>
-            <%= current_user.username  if current_user.username %>
-            <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
-          <% end %>
 
-          <div slot="dropdown-items" class="origin-top-left flex-1 max-w-sm min-w-sm absolute block left-0 mt-4 rounded-md shadow-lg bg-white border-gray-500">
-            <h5 class="mt-2 uppercase text-xs text-gray-500 font-normal py-2 pl-3 tracking-wide">My Stuff</h5>
-            <%= link_to profile_path(current_user), class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 flex items-center text-sm" do %>
-              <%= render_svg 'icons/person-badge', styles: "icon-md fill-current mr-3" %> My Profile
-            <% end %>
-            <%= link_to edit_user_registration_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 flex items-center text-sm" do %>
-              <%= render_svg 'icons/sliders', styles: "icon-md fill-current mr-3" %> Account Settings
-            <% end %>
-            <%= link_to destroy_user_session_path, method: :delete, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 rounded-b flex items-center text-sm"  do %>
-             <%= render_svg 'icons/door-closed', styles: "icon-md fill-current mr-3" %> Sign out
-            <% end %>
-          </div>
+  </dropdown>
+</div>
 
-        </dropdown>
-      <% end %>
+<%= render "shared/user_dropdown" %>
 
-    
-      
-      <div>
-        <%= link_to "PROJECTS", projects_path, class: "text-black" %>
-      </div>
+<div class="sidebar-nav-main mt-10 pt-12">
+  <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
+  <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
+  <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+  <%= link_to "Contact".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+</div>
