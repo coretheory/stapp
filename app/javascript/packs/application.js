@@ -55,3 +55,5 @@ document.addEventListener('turbolinks:load', () => {
     el: "[data-behavior='vue']",
   })
 })
+
+import "controllers"
