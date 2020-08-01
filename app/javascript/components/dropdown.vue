@@ -1,7 +1,7 @@
 <template>
-  <div v-click-outside="clickedOutside" class="relative inline-block">
+  <div v-click-outside="clickedOutside" class="relative flex flex-wrap inline-block">
 
-    <div role="button" class="inline-block select-none" @click.prevent="open = !open">
+    <div role="button" class="inline-block flex-1 select-none" @click.prevent="open = !open">
       <slot name="link"></slot>
     </div>
 

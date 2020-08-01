@@ -4,14 +4,18 @@
     <%= render "shared/head" %>
   </head>
 
-  <body class="relative h-screen overflow-x-hidden">
+  <body>
     <div data-behavior="vue">
       <%= render "shared/notices" %>   
-      <%= render "shared/navbar" %>
-
+      <div class="min-h-screen md:flex">
+      <div class="flex-none w-full md:max-w-xs bg-blue-300 text-white">
+        <%= render "shared/navbar" %>
+      </div>
       
-      <div class="content">
+      <div class="flex-1 bg-blue-700">
         <%= content_for?(:content) ? yield(:content) : yield %>
+      </div>
+        
       </div>
 
       <%= render "shared/footer" %>
