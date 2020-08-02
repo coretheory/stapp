@@ -1,22 +1,21 @@
 <% if user_signed_in? %>
-  <dropdown>
-    <%= link_to "#", slot: "link", class: "flex justify-between bg-purple-500 no-underline text-gray-700 uppercase text-xs tracking-wide items-center font-semibold mx-0 py-2 px-4 rounded" do %>
-      <%= current_user.username  if current_user.username %>
-      <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
+
+  <%= link_to "#", class: "flex justify-between bg-purple-500 no-underline text-gray-700 uppercase text-xs tracking-wide items-center font-semibold mx-0 py-2 px-4 rounded" do %>
+    <%= current_user.username  if current_user.username %>
+    <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
+  <% end %>
+
+  <div class="origin-top-left min-w-full left-0 rounded-md shadow-lg bg-white border-gray-500">
+    <h5 class="mt-2 uppercase text-xs text-gray-500 font-normal py-2 pl-3 tracking-wide">My Stuff</h5>
+    <%= link_to profile_path(current_user), class: "flex hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 items-center text-sm" do %>
+      <%= render_svg 'icons/person-badge', styles: "icon-md fill-current mr-3" %> My Profile
     <% end %>
+    <%= link_to edit_user_registration_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 flex items-center text-sm" do %>
+      <%= render_svg 'icons/sliders', styles: "icon-md fill-current mr-3" %> Account Settings
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 rounded-b flex items-center text-sm"  do %>
+     <%= render_svg 'icons/door-closed', styles: "icon-md fill-current mr-3" %> Sign out
+    <% end %>
+  </div>
 
-    <div slot="dropdown-items" class="origin-top-left min-w-full left-0 rounded-md shadow-lg bg-white border-gray-500">
-      <h5 class="mt-2 uppercase text-xs text-gray-500 font-normal py-2 pl-3 tracking-wide">My Stuff</h5>
-      <%= link_to profile_path(current_user), class: "flex hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 items-center text-sm" do %>
-        <%= render_svg 'icons/person-badge', styles: "icon-md fill-current mr-3" %> My Profile
-      <% end %>
-      <%= link_to edit_user_registration_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 flex items-center text-sm" do %>
-        <%= render_svg 'icons/sliders', styles: "icon-md fill-current mr-3" %> Account Settings
-      <% end %>
-      <%= link_to destroy_user_session_path, method: :delete, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 rounded-b flex items-center text-sm"  do %>
-       <%= render_svg 'icons/door-closed', styles: "icon-md fill-current mr-3" %> Sign out
-      <% end %>
-    </div>
-
-  </dropdown>
 <% end %>
