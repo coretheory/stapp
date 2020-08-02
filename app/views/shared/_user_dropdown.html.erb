@@ -1,12 +1,12 @@
 <% if user_signed_in? %>
 
-  <div>
-    <%= link_to "#", class: "flex justify-between bg-purple-500 no-underline text-gray-700 uppercase text-xs tracking-wide items-center font-semibold mx-0 py-2 px-4 rounded" do %>
+  <div data-controller="dropdown">
+    <%= link_to "#", data: { action: "dropdown#toggle" }, class: "flex justify-between bg-purple-500 no-underline text-gray-700 uppercase text-xs tracking-wide items-center font-semibold mx-0 py-2 px-4 rounded" do %>
       <%= current_user.username  if current_user.username %>
       <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
     <% end %>
 
-    <div class="origin-top-left min-w-full left-0 rounded-md shadow-lg bg-white border-gray-500">
+    <div data-target="dropdown.menu" class="dropdown-content origin-top-left min-w-full left-0 rounded-md shadow-lg bg-white border-gray-500">
       <h5 class="mt-2 uppercase text-xs text-gray-500 font-normal py-2 pl-3 tracking-wide">My Stuff</h5>
       <%= link_to profile_path(current_user), class: "flex hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-2 items-center text-sm" do %>
         <%= render_svg 'icons/person-badge', styles: "icon-md fill-current mr-3" %> My Profile

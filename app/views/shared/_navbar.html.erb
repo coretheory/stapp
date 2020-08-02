@@ -1,12 +1,12 @@
 <div class="flex justify-between py-2 px-4">
   <%= link_to 'Sara Thayer'.upcase, root_path, class: "md:hidden bg-yellow-500 hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
   
-  <div>
-    <%= link_to "#", class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
+  <div data-controller="dropdown">
+    <%= link_to "#", data: { action: "dropdown#toggle" }, class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
       <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
     <% end %>
 
-    <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white border overflow-hidden">
+    <div data-target="dropdown.menu" class="dropdown-content origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white border overflow-hidden">
       <%= link_to 'About'.upcase, root_path, class: "block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
       <%= link_to 'Gallery'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>
       <%= link_to 'Projects'.upcase, root_path, class: "mt-1 block px-2 py-1 font-semibold rounded hover:bg-purple-500 hover:text-white focus:bg-purple-500 hover:text-white focus:outline-none" %>

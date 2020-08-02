@@ -2,7 +2,9 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-	connect() {
+	static targets = ["menu"]
+	
+	toggle() {
     console.log("hello from StimulusJS")
   }
 }
