@@ -5,20 +5,18 @@
   </head>
 
   <body>
-    <div data-behavior="vue">
-      <%= render "shared/notices" %>   
-      <div class="min-h-screen md:flex">
-        <div class="flex-none w-full md:max-w-xs bg-blue-300 text-white">
-          <%= render "shared/navbar" %>
-        </div>
-      
-        <div class="flex-1 bg-blue-700">
-          <%= content_for?(:content) ? yield(:content) : yield %>
-        </div>
-        
+    <%= render "shared/notices" %>   
+    <div class="min-h-screen md:flex">
+      <div class="flex-none w-full md:max-w-xs bg-blue-300 text-white">
+        <%= render "shared/navbar" %>
       </div>
-
-      <%= render "shared/footer" %>
+    
+      <div class="flex-1 bg-blue-700">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </div>
+      
     </div>
+
+    <%= render "shared/footer" %>
   </body>
 </html>
