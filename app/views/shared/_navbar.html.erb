@@ -2,7 +2,7 @@
   <%= link_to 'Sara Thayer'.upcase, root_path, class: "md:hidden bg-yellow-500 hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
   
   <div data-controller="dropdown">
-    <%= link_to "#", data: { action: "dropdown#toggle" }, class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
+    <%= link_to "#", data: { action: "click->dropdown#toggle" }, class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
       <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
     <% end %>
 
@@ -18,8 +18,13 @@
 
 <%= render "shared/user_dropdown" %>
 
-<div data-controller="hello">
-  <h1 data-target="hello.output"></h1>
+<div data-controller="greet">
+  <input data-target="greet.name" type="text" class="text-black">
+  
+  <button data-action="click->greet#greet">
+    Greet
+  </button>
+  <span data-target="greet.output">
 </div>
 
 <div class="sidebar-nav-main mt-10 pt-12">
