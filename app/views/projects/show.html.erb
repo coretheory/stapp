@@ -12,17 +12,17 @@
         
         <div class="flex flex-wrap w-full text-center justify-center align-items-center mr-5 pr-8 ml-0 pl-0">
           <div class="leading-loose text-center m-auto pb-6 pt-8 my-2 mr-5 pr-8 ml-0 pl-0">
-            <div class="leading-tight text-center flex-none text-3xl sm:flex-1 sm:text-4xl md:flex-auto md:text-4xl lg:flex-initial lg:text-5xl xl:flex-1 xl:text-6xl">
+            <div class="text-title leading-tight text-center flex-none text-3xl sm:flex-1 sm:text-4xl md:flex-auto md:text-4xl lg:flex-initial lg:text-5xl xl:flex-1 xl:text-6xl">
             <%= @project.title.upcase %>
             </div>
-            <hr class="leading-tight">
+            <hr class="text-title leading-tight">
             <%= render 'subtitle', project: @project %>
           </div>
         </div>
 
         <%= render 'project_info', project: @project %>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
+        <div class="text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.intro %>
         </div>
 
@@ -36,7 +36,7 @@
           <% end %>
         </div>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
+        <div class="text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.body %>
         </div>
 
@@ -50,7 +50,7 @@
           <% end %>
         </div>
 
-        <div class="leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
+        <div class="text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
           <%= @project.outro %>
         </div>
 

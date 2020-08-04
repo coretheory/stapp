@@ -6,7 +6,7 @@
       <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
     <% end %>
 
-    <div data-target="dropdown.menu" class="dropdown mt-10 pt-12">
+    <div data-target="dropdown.menu" class="dropdown mt-10 pt-12 text-sidebar-nav">
       <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
       <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
       <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
@@ -18,7 +18,7 @@
 
 <%= render "shared/user_dropdown" %>
 
-<div class="sidebar-nav-main mt-10 pt-12">
+<div class="sidebar-nav-main mt-10 pt-12 text-sidebar-nav">
   <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
   <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
   <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
