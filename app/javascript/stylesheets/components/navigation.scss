@@ -4,10 +4,10 @@
 	}
 }
 
-.dropdown-content {
+.dropdown {
 	display: none;
 }
 
-.dropdown-content--active {
-	display: block;
+.dropdown--open {
+	display: inline-block;
 }
