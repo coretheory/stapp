@@ -26,9 +26,23 @@
 		          <%= @project.intro if @project.intro.present? %>
 		        </div>
 
-		        <div class="flex flex-wrap flex-row m-auto">
+		        <div class="text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
+		          <%= @project.body if @project.body.present? %>
+		        </div>
+
+		        <div class="flex-1">
 		          <% if @project.body_images[0..1] %>
 		            <% @project.body_images[0..1].each do |body_image| %>
+		              <% if body_image.variable? %>
+		                <%= image_tag body_image %>
+		              <% end %>
+		            <% end %>
+		          <% end %>
+		        </div>
+
+		        <div class="flex flex-wrap flex-row m-auto">
+		          <% if @project.body_images[2..3] %>
+		            <% @project.body_images[2..3].each do |body_image| %>
 		              <% if body_image.variable? %>
 		                <%= image_tag body_image.variant(resize_to_fit: [400, 600]) %>
 		              <% end %>
@@ -36,13 +50,9 @@
 		          <% end %>
 		        </div>
 
-		        <div class="text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
-		          <%= @project.body if @project.body.present? %>
-		        </div>
-
 		        <div class="flex flex-wrap flex-row m-auto">
-		          <% if @project.body_images[2..5] %>
-		            <% @project.body_images[2..5].each do |body_image| %>
+		          <% if @project.body_images[4..5] %>
+		            <% @project.body_images[4..5].each do |body_image| %>
 		              <% if body_image.variable? %>
 		                <%= image_tag body_image.variant(resize_to_fit: [400, 600]) %>
 		              <% end %>

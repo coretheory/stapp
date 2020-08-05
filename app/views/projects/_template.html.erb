@@ -1,8 +1,6 @@
 <% content_for :primary_content do %>
   <% if @projects.exists? %>
-    <div class="flex mb-4">
-      <%= render @projects %>
-    </div>
+    <%= render @projects %>
   <% else %>
     <div class="p-10 text-center">
       <%= render_svg 'icons/emoji-expressionless' %>
