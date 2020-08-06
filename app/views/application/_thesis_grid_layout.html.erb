@@ -30,23 +30,17 @@
 			          <%= @project.intro %>
 			        </div>
 		        <% end %>
+		
+						<div class="grid grid-cols-1 sm:grid-cols-2">
+		          <div><%= image_tag @project.body_images[0] if @project.body_images[0].present? %></div>
+		          <div><%= image_tag @project.body_images[1] if @project.body_images[1].present? %></div>
+						</div>
 
-		        <% if @project.body %>
+						<% if @project.body %>
 			        <div class="grid grid-cols-1 text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
 			          <%= @project.body %>
 			        </div>
 		        <% end %>
-
-		        <% if @project.outro %>
-			        <div class="grid grid-cols-1 text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
-			          <%= @project.outro %>
-			        </div>
-		        <% end %>
-							
-						<div class="grid grid-cols-1">
-		          <div><%= image_tag @project.body_images[0] if @project.body_images[0].present? %></div>
-		          <div><%= image_tag @project.body_images[1] if @project.body_images[1].present? %></div>
-						</div>
 
 		        <div class="grid grid-cols-1 sm:grid-cols-2">
 							<div><%= image_tag @project.body_images[2] if @project.body_images[2].present? %></div>
@@ -54,18 +48,19 @@
 							<div><%= image_tag @project.body_images[4] if @project.body_images[4].present? %></div>
 							<div><%= image_tag @project.body_images[5] if @project.body_images[5].present? %></div>
 						</div>
+
+						<% if @project.outro %>
+			        <div class="grid grid-cols-1 text-paragraph-body leading-normal text-base lg:pr-6 mb-5 lg:w-2/3 md:w-3/4 sm:w-3/4 text-left m-auto">
+			          <%= @project.outro %>
+			        </div>
+		        <% end %>
 						
 						<div class="grid grid-cols-1 sm:grid-cols-2">
 		          <div><%= image_tag @project.body_images[6] if @project.body_images[6].present? %></div>
 							<div><%= image_tag @project.body_images[7] if @project.body_images[7].present? %></div>
 							<div><%= image_tag @project.body_images[8] if @project.body_images[8].present? %></div>
+							<div><%= image_tag @project.body_images[9] if @project.body_images[9].present? %></div>
 		        </div>
-						
-						<% if @project.body_images[9].present? %>
-			        <div class="grid grid-cols-1">
-								<div><%= image_tag @project.body_images[9] %></div>
-			        </div>
-		        <% end %>
 
 		        <div class="grid grid-cols-1">
 							<%= yield :secondary_content %>

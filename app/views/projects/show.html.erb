@@ -18,6 +18,8 @@
   <%= render "two_grid_layout" %>
 <% elsif @project.three_grid_layout %>
   <%= render "three_grid_layout" %>
+<% elsif @project.alt_grid_layout %>
+  <%= render "alt_grid_layout" %>
 <% else %>
-  <%= render "project_layout" %>
+  <%= render "thesis_grid_layout" %>
 <% end %>
