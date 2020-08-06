@@ -1,6 +1,6 @@
 <% content_for :primary_content do %>
   <% if @projects.exists? %>
-    <div class="flex mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4">
       <%= render @projects %>
     </div>
   <% else %>
