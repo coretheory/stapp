@@ -1,16 +1,24 @@
-<div class="flex justify-between py-2 px-4">
-  <%= link_to 'Sara Thayer'.upcase, root_path, class: "md:hidden bg-yellow-500 hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
+<div class="flex justify-between px-4">
+  <div>
+  <%= link_to 'Sara Thayer'.upcase, root_path, class: "md:hidden hover:text-purple-500 focus:text-purple-500 focus:outline-none" %>
+  </div>
   
   <div data-controller="dropdown">
-    <%= link_to "#", data: { action: "click->dropdown#toggle" }, class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
-      <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
+    <%= link_to "#", data: { action: "click->dropdown#toggle click@window->dropdown#hide" }, class: "md:hidden bg-red-100 hover:text-purple-500 focus:text-purple-500 focus:outline-none" do %>
+      <div>
+        <%= render_svg 'icons/grid', styles: "icon-md fill-current" %>
+      </div>
     <% end %>
 
-    <div data-target="dropdown.menu" class="dropdown mt-10 pt-12 text-sidebar-nav">
-      <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
-      <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
-      <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
-      <%= link_to "Contact".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+    <div data-target="dropdown.menu" class="dropdown mt-10 pt-12 text-sidebar-nav" aria-expanded="false">
+      <div class="flex justify-center">
+        <div class="grid grid-cols-1">
+          <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
+          <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
+          <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+          <%= link_to "Contact".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -18,9 +26,13 @@
 
 <%= render "shared/user_dropdown" %>
 
-<div class="sidebar-nav-main mt-10 pt-12 text-sidebar-nav">
-  <%= link_to "About".upcase, projects_path, class: "block flex justify-center text-black pr-8 mt-4 hover:text-gray-700" %>
-  <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center text-black pr-6 mt-4 hover:text-gray-700" %>
-  <%= link_to "Projects".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
-  <%= link_to "Contact".upcase, projects_path, class: "block flex justify-center text-black pr-4 mt-4 hover:text-gray-700" %>
+<div class="sidebar-nav-main text-sidebar-nav">
+  <div class="flex justify-center">
+    <div class="grid grid-cols-1">
+    <%= link_to "About".upcase, projects_path, class: "block flex justify-start text-black mt-4 hover:text-gray-700" %>
+    <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-start text-black mt-4 hover:text-gray-700" %>
+    <%= link_to "Projects".upcase, projects_path, class: "block flex justify-start text-black mt-4 hover:text-gray-700" %>
+    <%= link_to "Contact".upcase, projects_path, class: "block flex justify-start text-black mt-4 hover:text-gray-700" %>
+    </div>
+  </div>
 </div>
