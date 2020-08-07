@@ -6,7 +6,7 @@
           <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
         <% end %>
 
-        <%= link_to @project, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
+        <%= link_to @project, method: :delete, class: "no-underline", data: { confirm: 'Are you sure?' } do %>
           <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
         <% end %>
       </div>
