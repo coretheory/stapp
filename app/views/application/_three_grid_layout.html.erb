@@ -43,13 +43,13 @@
 			        </div>
 		        <% end %>
 							
-						<div class="grid grid-cols-1">
+						<div class="grid grid-cols-1 gap-4">
 		          <div><%= image_tag @project.body_images[0] if @project.body_images[0].present? %></div>
 		          <div><%= image_tag @project.body_images[1] if @project.body_images[1].present? %></div>
 		          <div><%= image_tag @project.body_images[2] if @project.body_images[2].present? %></div>
 						</div>
 
-		        <div class="grid grid-cols-1 sm:grid-cols-3">
+		        <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
 							<div><%= image_tag @project.body_images[3] if @project.body_images[3].present? %></div>
 							<div><%= image_tag @project.body_images[4] if @project.body_images[4].present? %></div>
 							<div><%= image_tag @project.body_images[5] if @project.body_images[5].present? %></div>
