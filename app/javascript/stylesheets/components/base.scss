@@ -17,11 +17,16 @@ a:active {
 }
 
 .vertical-line-project {
-	border-left: .1rem solid gray;
+	border-left: .05rem solid gray;
 	height: 12rem;
 }
 
 .vertical-line-contact {
-	border-left: .1rem solid gray;
+	border-left: .05rem solid gray;
 	height: 15rem;
+}
+
+.vertical-line-footer {
+	border-left: .05rem solid gray;
+	height: 9rem;
 }

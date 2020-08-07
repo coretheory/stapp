@@ -1,25 +1,33 @@
 <div class="grid grid-cols-1 gap-4 md:grid-cols-6">
   <div class="col-span-1 md:col-span-2">
     <div class="text-center md:text-left md:my-10 md:mr-10 md:pr-10">
-      <%= link_to "Sara Thayer".upcase, root_path, class: "block flex justify-center text-sidebar-nav text-2xl text-black hover:text-gray-700" %>
+      <%= link_to "Sara Thayer".upcase, root_path, class: "flex justify-center text-sidebar-nav text-2xl text-black hover:text-gray-700" %>
     </div>
   </div>
-  <div class="col-span-1">
-    <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700" %>
-    <%= link_to "About".upcase, about_path, class: "block flex justify-center md:justify-start text-l text-sidebar-nav text-black mt-4 hover:text-gray-700" %>
-    <%= link_to "Contact".upcase, projects_path, class: "block flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700" %>
+  <div class="col-span-1 mt-10 md:mt-8">
+    <div class="vertical-line-footer">
+      <%= link_to "Gallery".upcase, projects_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4" %>
+      <%= link_to "About".upcase, about_path, class: "flex justify-center md:justify-start text-l text-sidebar-nav text-black mt-4 hover:text-gray-700 md:pl-4" %>
+      <%= link_to "Contact".upcase, projects_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4" %>
+      <ul class="list-none md:pl-4">
+        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
+        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
+      </ul>
+    </div>
   </div>
-  <div class="col-span-1">
-    <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700"><%= "Projects".upcase %></div>
-      <ul class="list-none">
+  <div class="col-span-1 mt-2 md:mt-8">
+    <div class="vertical-line-footer">
+      <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4"><%= "Projects".upcase %></div>
+      <ul class="list-none md:pl-4">
         <li><%= link_to "Architectural Design", "#", class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
         <li><%= link_to "Graphic Design", "#", class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
         <li><%= link_to "Illustration", "#", class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
         <li><%= link_to "Product Design", "#", class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
       </ul>
     </div>
-    <div class="col-span-1 md:col-span-1"></div>
-    <div class="col-span-1 md:col-span-1"></div>
+  </div>
+  <div class="col-span-1 md:col-span-1"></div>
+  <div class="col-span-1 md:col-span-1"></div>
     
   </div>
 </div>
