@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: stapp_production
-  username: <%= Rails.application.credentials.postgresql[:username] %>
-  password: <%= Rails.application.credentials.postgresql[:password] %>
+  username: stapp
+  password: <%= ENV['STAPP_DATABASE_PASSWORD'] %>
