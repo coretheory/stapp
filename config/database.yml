@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: stapp-ruby_production
-  username: stapp-ruby
-  password: <%= ENV['STAPP-RUBY_DATABASE_PASSWORD'] %>
+  database: stapp_production
+  username: stapp
+  password: <%= ENV['STAPP_DATABASE_PASSWORD'] %>
