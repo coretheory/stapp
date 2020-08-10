@@ -13,5 +13,6 @@ class Project < ApplicationRecord
 	validates_presence_of :title
 	validates_presence_of :year
 	validates_presence_of :project_type
+	validates_presence_of :project_category
 	validates_presence_of :user_id
 end

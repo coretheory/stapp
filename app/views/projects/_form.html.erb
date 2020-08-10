@@ -43,6 +43,11 @@
   </div>
 
   <div class="mb-6">
+    <%= form.label :project_category, class: "label" %>
+    <%= form.select(:project_category, ['Architectural Design', 'Graphic Design', 'Illustration', 'Product Design'], class: "select") %>
+  </div>
+
+  <div class="mb-6">
     <%= form.label :project_team, class: "label" %>
     <%= form.rich_text_area :project_team, class: "input" %>
   </div>
