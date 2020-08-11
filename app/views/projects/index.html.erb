@@ -9,7 +9,7 @@
         <%= render_svg 'icons/emoji-expressionless' %>
       </div>
       <p class="mb-4">Wow such empty... </p>
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.username == 'sara' %>
           <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-purple btn-small" %>
         <% end %>
     </div>
