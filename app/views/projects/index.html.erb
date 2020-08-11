@@ -4,10 +4,14 @@
       <%= render @projects %>
     </div>
   <% else %>
-    <div class="flex justify-center p-10 text-center">
-      <%= render_svg 'icons/emoji-expressionless' %>
+    <div class="block justify-center p-10 text-center">
+      <div class="flex justify-center pb-4">
+        <%= render_svg 'icons/emoji-expressionless' %>
+      </div>
       <p class="mb-4">Wow such empty... </p>
-      <%= link_to 'Create a new project', new_project_path, class: "btn btn-purple btn-small" %>
+      <% if user_signed_in? %>
+          <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-purple btn-small" %>
+        <% end %>
     </div>
   <% end %>
 <% end %>
