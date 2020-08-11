@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 	get '/contact', to: "home#contact"
 
   resources :projects
-  resources :contextual_objects
+  get '/gallery', to: "projects#gallery"
+
+  resources :contextual_objects # delete contextual objects
   resources :posts
   
   devise_for :users

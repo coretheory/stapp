@@ -12,7 +12,7 @@
 
       <div class="grid grid-cols-1 mt-4 pt-4 pl-4 pr-12 pb-6 bg-white rounded shadow-lg">
         <%= link_to "About".upcase, about_path, class: "block flex justify-start text-l text-black pr-4 mt-4 hover:text-gray-700" %>
-        <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-start text-l text-black pr-4 mt-4 hover:text-gray-700" %>
+        <%= link_to "Gallery".upcase, gallery_path, class: "block flex justify-start text-l text-black pr-4 mt-4 hover:text-gray-700" %>
         <div data-controller="dropdown">
           <%= link_to "Projects".upcase, "#", data: { action: "click->dropdown#toggle click@window->dropdown#hide" }, class: "block flex justify-start text-l text-black pr-4 mt-4 hover:text-gray-700" %>
           <div data-target="dropdown.menu" class="dropdown pt-2" aria-expanded="false">
@@ -40,7 +40,7 @@
     <div class="grid grid-cols-1">
     <%= link_to "Sara Thayer".upcase, root_path, class: "block flex justify-start text-2xl text-black my-10 hover:text-gray-700" %>
     <%= link_to "About".upcase, about_path, class: "block flex justify-start text-l text-black mt-4 hover:text-gray-700" %>
-    <%= link_to "Gallery".upcase, projects_path, class: "block flex justify-start text-l text-black mt-4 hover:text-gray-700" %>
+    <%= link_to "Gallery".upcase, gallery_path, class: "block flex justify-start text-l text-black mt-4 hover:text-gray-700" %>
       <div data-controller="dropdown">
         <%= link_to "Projects".upcase, "#", data: { action: "click->dropdown#toggle click@window->dropdown#hide" }, class: "block flex justify-start text-l text-black mt-4 hover:text-gray-700" %>
         <div data-target="dropdown.menu" class="dropdown pt-2" aria-expanded="false">
