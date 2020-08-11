@@ -6,6 +6,18 @@ class ApplicationController < ActionController::Base
     super
   end
 
+  def authorize_admin(resource)
+    redirect_to root_path, alert: 'Easter egg! Feature coming in the future.' unless resource.current_user.admin?
+  end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.json { render nothing: true, status: :not_found }
+      format.html { redirect_to main_app.root_url, notice: exception.message, status: :not_found }
+      format.js   { render nothing: true, status: :not_found }
+    end
+  end
+
   protected
 
   def configure_permitted_parameters

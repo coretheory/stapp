@@ -21,6 +21,9 @@ gem 'image_processing', '~> 1.2'
 # Authentication
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
+# Authorization
+gem 'cancancan', '~> 3.1'
+
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
