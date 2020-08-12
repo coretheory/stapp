@@ -37,15 +37,6 @@ Rails.application.configure do
   # Sendgrid
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    user_name: "<%= Rails.application.credentials.sendgrid[:sg_username] %>",
-    password: "<%= Rails.application.credentials.sendgrid[:sg_password] %>",
-    domain: "<%= Rails.application.credentials.sendgrid[:sg_domain] %>",
-    address: "<%= Rails.application.credentials.sendgrid[:sg_address] %>",
-    port: "<%= Rails.application.credentials.sendgrid[:sg_port] %>",
-    authentication: "<%= Rails.application.credentials.sendgrid[:sg_authentication] %>",
-    enable_starttls_auto: "<%= Rails.application.credentials.sendgrid[:sg_enable_starttls_auto] %>"
-  }
 
   config.action_mailer.perform_caching = false
 
