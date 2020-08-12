@@ -18,11 +18,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'activestorage-office-previewer', '~> 0.1.2'
 gem 'image_processing', '~> 1.2'
 
-# Authentication
-gem 'devise', '~> 4.7', '>= 4.7.2'
-
-# Authorization
+# Authentication & Authorization
 gem 'cancancan', '~> 3.1'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
@@ -33,6 +31,11 @@ gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript. Read more: https://gi
 
 # Database
 gem 'pg', '>= 0.18', '< 2.0'
+
+# Forms
+gem 'country_select', '~> 4.0'
+gem 'mail_form', '~> 1.8'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 # Other
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
