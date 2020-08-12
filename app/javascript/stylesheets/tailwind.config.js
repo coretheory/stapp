@@ -759,7 +759,5 @@ module.exports = {
     animation: ['responsive'],
   },
   corePlugins: {},
-  plugins: [
-    require('@tailwindcss/custom-forms'),
-  ],
+  plugins: [],
 }
