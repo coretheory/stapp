@@ -1,8 +1,8 @@
 class ProjectsController < ApplicationController
   load_and_authorize_resource
-  before_action :get_all_projects, only: [:index, :arc_design_index, :gallery, :graphic_design_index, :illustration_index, :product_design_index]
+  before_action :get_all_projects, only: [:index, :front_page_gallery, :arc_design_index, :gallery, :graphic_design_index, :illustration_index, :product_design_index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :gallery, :index, :arc_design_index, :graphic_design_index, :illustration_index, :product_design_index]
+  before_action :authenticate_user!, except: [:show, :gallery, :front_page_gallery, :index, :arc_design_index, :graphic_design_index, :illustration_index, :product_design_index]
 
   # GET /projects
   # GET /projects.json
@@ -27,7 +27,9 @@ class ProjectsController < ApplicationController
   end
 
   def gallery
-    @projects = Project.all
+  end
+
+  def front_page_gallery
   end
 
   # GET /projects/new

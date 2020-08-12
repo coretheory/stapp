@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	root to: "projects#gallery"
+	root to: "projects#front_page_gallery"
 
 	get '/about', to: "home#about"
 	get '/contact', to: "home#contact"

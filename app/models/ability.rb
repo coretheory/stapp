@@ -4,7 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can [:gallery, :read], [Post, Project]
+    can [:front_page_gallery, :gallery, :arc_design_index, :graphic_design_index, :illustration_index, :product_design_index, :read], [Post, Project]
     return unless user.present?
     can :manage, Post, user_id: user.id
     return unless user.admin?
