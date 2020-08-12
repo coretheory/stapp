@@ -1,17 +1,29 @@
 <% content_for :primary_content do %>
   <% if @posts.exists? %>
-    <%= render @posts %>
+    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+      <div class="shadow rounded">
+      <%= render @posts %>
+      </div>
+    </div>
   <% else %>
-    <div class="p-10 text-center">
-      <%= render_svg 'icons/emoji-expresionless' %>
-      <p class="mb-4">Wow such empty... </p>
-      <%= link_to 'Create a new post', new_post_path, class: "btn btn-black btn-small" %>
+    <div class="block justify-center p-10 text-center">
+      <div class="flex justify-center pb-4">
+        <%= render_svg 'icons/pen' %>
+      </div>
+      <p class="mb-4">Coming soon... </p>
+      <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-purple btn-small" %>
+        <% end %>
     </div>
   <% end %>
 <% end %>
 
+
+
 <% content_for :secondary_content do %>
-  <%= link_to 'New post', new_post_path %>
+  <%= link_to 'New post', new_post_path, class: "btn btn-black btn-small" %>
 <% end %>
 
-<%= render "basic_layout" %>
+
+
+<%= render "index_layout" %>
