@@ -9,7 +9,6 @@ require("@rails/activestorage").start()
 require("channels")
 require("trix")
 require("@rails/actiontext")
-require('@tailwindcss/custom-forms')
 
 import "stylesheets/application"
 import "components/direct_uploads"
