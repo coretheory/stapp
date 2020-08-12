@@ -1,117 +1,136 @@
-<%= form_with(model: project, local: true) do |form| %>
-  <% if project.errors.any? %>
-    <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
-      <h2 class="text-sm heading text-red-500"><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<div class="grid grid-cols-1">
+  <%= form_with(model: project, local: true) do |form| %>
+    <% if project.errors.any? %>
+      <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
+        <h2 class="text-sm heading text-red-500"><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul class="text-sm mt-2 text-red-500 pl-4 list-disc">
-      <% project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-
-  <% end %>
-
-  <div class="mb-6">
-    <%= form.label :header_image, class: "label" %>
-    <div class="mb-6">
-      <% if @project.header_image.attached? %>
-        <%= image_tag @project.header_image.representation(resize_to_fit: [200, 200]) %>
-      <% end %>
-    </div>
-    <%= form.file_field :header_image, direct_upload: true %>
-  </div>   
-
-  <div class="mb-6">
-    <%= form.label :title, class: "label" %>
-    <%= form.text_field :title, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :subtitle, class: "label" %>
-    <%= form.text_field :subtitle, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :year, class: "label" %>
-    <%= form.text_field :year, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :project_type, class: "label" %>
-    <%= form.text_field :project_type, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :project_category, class: "label" %>
-    <%= form.select(:project_category, ['Architectural Design', 'Graphic Design', 'Illustration', 'Product Design'], class: "select") %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :project_team, class: "label" %>
-    <%= form.rich_text_area :project_team, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :intro, class: "label" %>
-    <%= form.rich_text_area :intro, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :body, class: "label" %>
-    <%= form.rich_text_area :body, class: "input" %>
-  </div>
-
-  <div class="mb-6">
-    <%= form.label :outro, class: "label" %>
-    <%= form.rich_text_area :outro, class: "input" %>
-  </div>  
-  
-  <div class="mb-6">
-    <%= form.label :body_images, class: "label" %>
-    <div class="mb-6 flex flex-wrap justify-between">
-      <% if @project.body_images.attached? %>
-        <% @project.body_images.each do |body_image| %>
-          <%= image_tag body_image.representation(resize_to_fit: [200, 200]) %>
+        <ul class="text-sm mt-2 text-red-500 pl-4 list-disc">
+        <% project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
-      <% end %>
-    </div>
-    <%= form.file_field :body_images, multiple: true, direct_upload: true %>
-  </div>
+        </ul>
+      </div>
 
-  <div class="mb-6">
-    <%= form.label :footer_image, class: "label" %>
-    <div class="mb-6">
-      <% if @project.footer_image.attached? %>
-        <%= image_tag @project.footer_image.representation(resize_to_fit: [200, 200]) %>
-      <% end %>
-    </div>
-    <%= form.file_field :footer_image, direct_upload: true %>
-  </div> 
-  
-  <div class="flex justify-between">
-    <div class="mb-6">
-      <%= form.label :alt_grid_layout, class: "label" %>
-      <%= form.check_box :alt_grid_layout, class: "boolean" %>
-    </div>
+    <% end %>
 
     <div class="mb-6">
-      <%= form.label :thesis_grid_layout, class: "label" %>
-      <%= form.check_box :thesis_grid_layout, class: "boolean" %>
+      <%= form.label :header_image, class: "label" %>
+      <div class="mb-6">
+        <% if @project.header_image.attached? %>
+          <%= image_tag @project.header_image.representation(resize_to_fit: [200, 200]) %>
+        <% end %>
+      </div>
+      <%= form.file_field :header_image, direct_upload: true %>
+    </div>   
+
+    <div class="mb-6">
+      <%= form.label :title, class: "label" %>
+      <%= form.text_field :title, class: "input" %>
     </div>
 
     <div class="mb-6">
-      <%= form.label :two_grid_layout, class: "label" %>
-      <%= form.check_box :two_grid_layout, class: "boolean" %>
+      <%= form.label :subtitle, class: "label" %>
+      <%= form.text_field :subtitle, class: "input" %>
     </div>
 
     <div class="mb-6">
-      <%= form.label :three_grid_layout, class: "label" %>
-      <%= form.check_box :three_grid_layout, class: "boolean" %>
+      <%= form.label :year, class: "label" %>
+      <%= form.text_field :year, class: "input" %>
     </div>
-  </div>
 
-  <div class="mb-6">
-    <%= form.submit class: "btn btn-black" %>
-  </div>
-<% end %>
+    <div class="mb-6">
+      <%= form.label :project_type, class: "label" %>
+      <%= form.text_field :project_type, class: "input" %>
+    </div>
+
+    <div class="flex justify-between">
+      <div class="mb-6">
+        <%= form.label :architectural_design, class: "label" %>
+        <%= form.check_box :architectural_design, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :graphic_design, class: "label" %>
+        <%= form.check_box :graphic_design, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :illustration, class: "label" %>
+        <%= form.check_box :illustration, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :product_design, class: "label" %>
+        <%= form.check_box :product_design, class: "boolean" %>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :project_team, class: "label" %>
+      <%= form.rich_text_area :project_team, class: "input" %>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :intro, class: "label" %>
+      <%= form.rich_text_area :intro, class: "input" %>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :body, class: "label" %>
+      <%= form.rich_text_area :body, class: "input" %>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :outro, class: "label" %>
+      <%= form.rich_text_area :outro, class: "input" %>
+    </div>  
+    
+    <div class="mb-6">
+      <%= form.label :body_images, class: "label" %>
+      <div class="mb-6 flex flex-wrap justify-between">
+        <% if @project.body_images.attached? %>
+          <% @project.body_images.each do |body_image| %>
+            <%= image_tag body_image.representation(resize_to_fit: [200, 200]) %>
+          <% end %>
+        <% end %>
+      </div>
+      <%= form.file_field :body_images, multiple: true, direct_upload: true %>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :footer_image, class: "label" %>
+      <div class="mb-6">
+        <% if @project.footer_image.attached? %>
+          <%= image_tag @project.footer_image.representation(resize_to_fit: [200, 200]) %>
+        <% end %>
+      </div>
+      <%= form.file_field :footer_image, direct_upload: true %>
+    </div> 
+    
+    <div class="flex justify-between">
+      <div class="mb-6">
+        <%= form.label :alt_grid_layout, class: "label" %>
+        <%= form.check_box :alt_grid_layout, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :thesis_grid_layout, class: "label" %>
+        <%= form.check_box :thesis_grid_layout, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :two_grid_layout, class: "label" %>
+        <%= form.check_box :two_grid_layout, class: "boolean" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label :three_grid_layout, class: "label" %>
+        <%= form.check_box :three_grid_layout, class: "boolean" %>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <%= form.submit class: "btn btn-black" %>
+    </div>
+  <% end %>
+</div>

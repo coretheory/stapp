@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_174705) do
+ActiveRecord::Schema.define(version: 2020_08_12_001155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,10 @@ ActiveRecord::Schema.define(version: 2020_08_11_174705) do
     t.boolean "alt_grid_layout"
     t.boolean "thesis_grid_layout"
     t.string "project_category"
+    t.boolean "architectural_design"
+    t.boolean "graphic_design"
+    t.boolean "illustration"
+    t.boolean "product_design"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

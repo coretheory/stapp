@@ -1,0 +1,43 @@
+<% provide(:title, "Graphic Design") %>
+
+<div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
+  <div class="w-full pr-0 md:pr-6 mb-6">
+    <div class="bg-white">
+      <% if @projects.exists? %>
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-2">
+          <% @projects.each do |project| %>
+            <% if project.graphic_design == true && project.header_image.attached? %>
+              <div>
+                <%= link_to image_tag(project.header_image), project %>
+                <h1 class="text-title font-bold text-xl"><%= link_to project.title.upcase, project, class: "no-underline" %> <%= link_to project.subtitle.upcase, project, class: "no-underline font-light" if project.subtitle.present? %></h1>
+                <div class="text-paragraph-body font-light">
+                  <%= project.project_type %>
+                </div>
+              </div>
+              <% else %>
+              <div class="grid col-span-1 md:col-span-2 block justify-center p-10 text-center">
+                <div class="flex justify-center mt-10 pt-10 lg:mt-2 pb-4">
+                  <%= render_svg 'icons/pen' %>
+                </div>
+                <p class="mb-4">Coming soon... </p>
+                <% if user_signed_in? && current_user.admin? %>
+                    <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-purple btn-small" %>
+                  <% end %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="block justify-center p-10 text-center">
+          <div class="flex justify-center pb-4">
+            <%= render_svg 'icons/pen' %>
+          </div>
+          <p class="mb-4">Coming soon... </p>
+          <% if user_signed_in? && current_user.admin? %>
+              <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-purple btn-small" %>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
