@@ -69,6 +69,15 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
+  ActionMailer::Base.smtp_settings = {
+    user_name: "<%= Rails.application.credentials.sendgrid[:sg_username] %>",
+    password: "<%= Rails.application.credentials.sendgrid[:sg_password] %>",
+    domain: "<%= Rails.application.credentials.sendgrid[:sg_domain] %>",
+    address: "<%= Rails.application.credentials.sendgrid[:sg_address] %>",
+    port: "<%= Rails.application.credentials.sendgrid[:sg_port] %>",
+    authentication: "<%= Rails.application.credentials.sendgrid[:sg_authentication] %>",
+    enable_starttls_auto: "<%= Rails.application.credentials.sendgrid[:sg_enable_starttls_auto] %>"
+  }
   
 
   # Ignore bad email addresses and do not raise email delivery errors.
