@@ -29,7 +29,7 @@
 }
 
 .btn-black:hover {
-  @apply bg-gray-700;
+  @apply bg-gray-700 shadow-lg;
 }
 
 .btn-purple:active,
@@ -44,7 +44,7 @@
 }
 
 .btn-outline:hover {
-  @apply bg-gray-100 text-gray-800 border-gray-400;
+  @apply bg-gray-700 shadow-lg text-white border-gray-700;
 }
 
 .btn-white {

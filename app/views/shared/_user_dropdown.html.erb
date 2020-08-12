@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   
   <div data-controller="dropdown" class="md:pt-4">
-    <%= link_to "#", data: { action: "click->dropdown#toggle click@window->dropdown#hide" }, class: "block flex justify-between bg-purple-500 text-white uppercase mx-0 py-2 pl-2 pr-4 rounded" do %>
+    <%= link_to "#", data: { action: "click->dropdown#toggle click@window->dropdown#hide" }, class: "block flex justify-between bg-black text-white uppercase mx-0 py-2 pl-2 pr-4 rounded" do %>
       <%= current_user.username  if current_user.username %>
       <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
     <% end %>
