@@ -36,7 +36,6 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Forms
 gem 'country_select', '~> 4.0'
 gem 'mail_form', '~> 1.8'
-gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 # Other
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

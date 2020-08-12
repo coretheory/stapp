@@ -9,7 +9,15 @@
 			<h1 class=text-3xl><%= "Contact".upcase %></h1>
 		</div>
 		<div class="text-paragraph-body mr-5 pr-10">
-			<p class="text-left font-bold mb-3">Contact form here.</p>
+			<div class="block justify-center p-10 text-center">
+      <div class="flex justify-center pb-4">
+        <%= render_svg 'icons/pen' %>
+      </div>
+      <p class="mb-4">Coming soon... </p>
+      <% if user_signed_in? && current_user.admin? %>
+          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-purple btn-small" %>
+        <% end %>
+    </div>
 		</div>
 	</div>
 
