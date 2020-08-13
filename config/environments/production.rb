@@ -72,8 +72,8 @@ Rails.application.configure do
     domain: "<%= Rails.application.credentials.sendgrid[:sg_domain] %>",
     address: "<%= ails.application.credentials.sendgrid[:sg_address] %>",
     port: "<%= Rails.application.credentials.sendgrid[:sg_port] %>",
-    authentication: "<%= Rails.application.credentials.sendgrid[:sg_authentication] %>",
-    enable_starttls_auto: "<%= Rails.application.credentials.sendgrid[:sg_enable_starttls_auto] %>"
+    authentication: 'plain',
+    enable_starttls_auto: true
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
