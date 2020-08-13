@@ -69,9 +69,9 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     user_name: "<%= Rails.application.credentials.sendgrid[:SENDGRID_USERNAME] %>",
     password: "<%= Rails.application.credentials.sendgrid[:SENDGRID_PASSWORD] %>",
-    domain: "<%= Rails.application.credentials.sendgrid[:sg_domain] %>",
-    address: "<%= ails.application.credentials.sendgrid[:sg_address] %>",
-    port: "<%= Rails.application.credentials.sendgrid[:sg_port] %>",
+    domain: 'sarathayer.com',
+    address: 'smtp.sendgrid.net',
+    port: '587',
     authentication: 'plain',
     enable_starttls_auto: true
   }
