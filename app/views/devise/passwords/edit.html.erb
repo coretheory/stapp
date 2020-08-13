@@ -7,9 +7,9 @@
 
     <div class="mb-6">
       <div class="flex">
-      <%= f.label :password, "New password", class:"label" %>
+      <%= f.label :password, "New password", class: "label" %>
       <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em> (<%= @minimum_password_length %> characters minimum)</em>
       <% end %>
       </div>
       <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "input" %>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Change my password" %>
+      <%= f.submit "Change my password", class: "btn btn-black" %>
     </div>
   <% end %>
 
