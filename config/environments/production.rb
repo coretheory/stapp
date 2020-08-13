@@ -67,8 +67,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: host }
   Rails.application.routes.default_url_options[:host] = host
   ActionMailer::Base.smtp_settings = {
-    user_name: "<%= Rails.application.credentials.sendgrid[:SENDGRID_USERNAME] %>",
-    password: "<%= Rails.application.credentials.sendgrid[:SENDGRID_PASSWORD] %>",
+    user_name: Rails.application.credentials.sendgrid[:SENDGRID_USERNAME],
+    password: Rails.application.credentials.sendgrid[:SENDGRID_PASSWORD],
     domain: 'sarathayer.com',
     address: 'smtp.sendgrid.net',
     port: '587',
