@@ -63,16 +63,16 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = Rails.application.credentials.sendgrid[:host]
+  host = 'www.sarathayer.com'
   config.action_mailer.default_url_options = { host: host }
   Rails.application.routes.default_url_options[:host] = host
   ActionMailer::Base.smtp_settings = {
     user_name: Rails.application.credentials.sendgrid[:SENDGRID_USERNAME],
     password: Rails.application.credentials.sendgrid[:SENDGRID_PASSWORD],
-    domain: Rails.application.routes.default_url_options[:sg_domain],
-    address: Rails.application.routes.default_url_options[:sg_address],
-    port: Rails.application.routes.default_url_options[:sg_port],
-    authentication: Rails.application.routes.default_url_options[:sg_authentication],
+    domain: 'sarathayer.com',
+    address: 'smtp.sendgrid.net',
+    port: '587',
+    authentication: 'plain',
     enable_starttls_auto: true
   }
 

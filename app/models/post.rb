@@ -1,8 +1,8 @@
 class Post < ApplicationRecord
-	belongs_to :user
-
 	extend FriendlyId
   friendly_id :title, use: :slugged
+  
+	belongs_to :user
 
 	has_rich_text :body
 
