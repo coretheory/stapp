@@ -12,7 +12,7 @@
       </div>
       <p class="mb-4">Coming soon... </p>
       <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-purple btn-small" %>
+          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-pink-300 btn-small" %>
         <% end %>
     </div>
   <% end %>
@@ -21,7 +21,7 @@
 
 
 <% content_for :secondary_content do %>
-  <%= link_to 'New post', new_post_path, class: "btn btn-black btn-small" %>
+  <%= link_to 'New post', new_post_path, class: "btn btn-pink-300 btn-small" %>
 <% end %>
 
 

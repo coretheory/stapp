@@ -14,9 +14,6 @@
         <%= render_svg 'icons/pen' %>
       </div>
       <p class="mb-4">Coming soon... </p>
-      <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-purple btn-small" %>
-        <% end %>
     </div>
 		</div>
 	</div>
