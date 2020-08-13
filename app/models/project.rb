@@ -1,6 +1,9 @@
 class Project < ApplicationRecord
 	belongs_to :user
 
+	extend FriendlyId
+  friendly_id :title, use: :slugged
+
 	has_rich_text :intro
 	has_rich_text :body
 	has_rich_text :outro

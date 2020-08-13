@@ -38,6 +38,7 @@ gem 'country_select', '~> 4.0'
 gem 'mail_form', '~> 1.8'
 
 # Other
+gem 'friendly_id', '~> 5.3'
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Server
