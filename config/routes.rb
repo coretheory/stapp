@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
 	root to: "projects#front_page_gallery"
 
 	get '/about', to: "home#about"
-	get '/contact', to: "home#contact"
+  get '/contact', to: "contacts#new", as: 'contact'
+  resources :contacts, only: [:create]
 
   resources :projects
   get '/gallery', to: "projects#gallery"
