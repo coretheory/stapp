@@ -1,0 +1,27 @@
+<%= display_meta_tags(
+      site: "Interdisciplinary Designer | SARA THAYER",
+      reverse: true,
+      viewport: "width=device-width, initial-scale=1",
+      og: {
+        title: :title,
+        type: "website",
+        url: request.original_url,
+        image: [{
+          _: image_url('Tectonic_Chunk.jpg'),
+          width: 1200,
+          height: 630
+        }],
+        site_name: "sarathayer.com",
+        description: "Interdisciplinary designer, consultant, co-founder, and remote expert for boundary-shattering businesses.",
+      },
+      twitter: {
+        card:  "photo",
+        image: {
+          _: image_url('Tectonic_Chunk.jpg'),
+          width:  1200,
+          height: 630,
+        }
+      },
+      author: "SARA THAYER",
+      description: "Interdisciplinary designer, consultant, co-founder, and remote expert for boundary-shattering businesses.",
+      ) %>

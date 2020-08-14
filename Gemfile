@@ -39,6 +39,7 @@ gem 'mail_form', '~> 1.8'
 
 # Other
 gem 'friendly_id', '~> 5.3'
+gem 'meta-tags', '~> 2.13'
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Server
@@ -53,6 +54,7 @@ group :development, :test do
 end
 
 group :development do
+	gem 'brakeman', '~> 4.9'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
