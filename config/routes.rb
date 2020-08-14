@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
 	root to: "projects#front_page_gallery"
 
 	get '/about', to: "home#about"
