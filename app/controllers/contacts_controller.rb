@@ -1,11 +1,11 @@
-include Hcaptcha::Adapters::ControllerMethods
-
 class ContactsController < ApplicationController
   def new 
     @contact = Contact.new
   end
 
   def create
+    include Hcaptcha::Adapters::ControllerMethods
+
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if verify_hcpatcha(message: "Don't forget the hCaptcha!") && @contact.deliver
