@@ -6,8 +6,9 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
-    if verify_hcaptcha(secret_key: Rails.application.credentials.hcaptcha[:HCAPTCHA_SECRET_KEY]) && @contact.deliver
+    if verify_hcaptcha(secret_key: Rails.application.credentials.hcaptcha[:HCAPTCHA_SECRET_KEY])
       flash.now[:error] = nil
+      @contact.deliver
   		redirect_to root_path, notice: 'Thank you for your message. We will contact you soon!'
     else
       flash.now[:error] = "Cannot send message. Did you complete the hCaptcha?"

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 	get '/about', to: "home#about"
   get '/contact', to: "contacts#new", as: 'contact'
-  resources :contacts, only: [:create]
+  resource :contacts, only: [:create]
 
   resources :projects
   get '/gallery', to: "projects#gallery"
