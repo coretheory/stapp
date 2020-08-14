@@ -35,7 +35,6 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 # Forms
 gem 'country_select', '~> 4.0'
-gem 'hcaptcha', '~> 7.0', '>= 7.0.1'
 gem 'mail_form', '~> 1.8'
 
 # Other
