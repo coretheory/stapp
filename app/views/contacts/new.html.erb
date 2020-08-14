@@ -11,29 +11,33 @@
     <div>
 	    <%= form_for @contact do |form| %>
 		    <% if flash[:error].present? %>
-		        <p> flash[:error]</p>
+		      <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
+		        <ul class="text-sm mt-2 text-red-500 pl-4 list-disc">
+						<li class="text-paragraph-body"><%= flash[:error] %> </li>
+		        </ul>
+		      </div>
 		    <% end %>
-		    <div class="field mt-6 mb-6">
+		    <div class="mt-6 mb-6">
 			    <%= form.label :name, class: 'label' %>
 			    <%= form.text_field :name, required: true, class: 'input' %>
 		  	</div>
 
-		    <div class="field mb-6">
+		    <div class="mb-6">
 			    <%= form.label :email, class: 'label' %>
 			    <%= form.text_field :email, required: true, class: 'input' %>
 		  	</div>
 
-		    <div class="field mb-6">
+		    <div class="mb-6">
 			    <%= form.label :message, class: 'label' %>
-			    <%= form.rich_text_area :message, as: :text, class: 'input' %>
+			    <%= form.text_area :message, as: :text, class: 'input' %>
 		  	</div>
 
-		 		<div class="field hidden">
+		 		<div class="hidden">
 			    <%= form.label :nickname,  class: 'hidden' %>
 			    <%= form.text_field :nickname, class: 'hidden' %>
 				</div>
 
-				<div class="h-captcha" data-sitekey="91588db4-4d60-4078-927a-1bed1027ad7c"></div>
+				<div class="h-captcha mb-6" data-sitekey="91588db4-4d60-4078-927a-1bed1027ad7c"></div>
 
 		    <div class="mb-6">
 			    <%= form.submit 'Send message', class: "btn btn-black" %>
