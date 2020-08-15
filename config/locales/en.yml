@@ -30,4 +30,15 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  arc_design_link_html: "Architectural design"
+  graphic_design_link_html: "Graphic design"
+  illustration_link_html: "Illustration"
+  product_design_link_html: "Product design"
+  about_link_html: "About"
+  contact_link_html: "Contact"
+  gallery_link_html: "Gallery"
+  projects_link_html: "Projects"
+  learn_more_link_html: "Learn more"
+  hello: "Hello, world!"
+  welcome: "Welcome!"
+  coming_soon_html: "Coming soon..."

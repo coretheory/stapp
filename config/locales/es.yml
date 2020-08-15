@@ -1,2 +1,13 @@
 es:
-  hello:
+  arc_design_link_html: "Diseño arquitectónico"
+  graphic_design_link_html: "Diseño gráfico"
+  illustration_link_html: "Ilustración"
+  product_design_link_html: "Diseño de producto"
+  about_link_html: "Sobre"
+  contact_link_html: "Contacto"
+  gallery_link_html: "Galería"
+  projects_link_html: "Proyectos"
+  learn_more_link_html: "Aprender más"
+  hello: "¡Hola, Mundo!"
+  welcome: "¡Bienvenido!"
+  coming_soon_html: "Próximamente..."
