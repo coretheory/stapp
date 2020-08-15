@@ -106,25 +106,29 @@
       </div>
       <%= form.file_field :footer_image, direct_upload: true %>
     </div> 
+
+    <div class="pt-4 mb-3">
+        <p class="label">Grid Layout</p>
+      </div>
     
-    <div class="flex justify-between">
+    <div class="flex justify-between pb-4">
       <div class="mb-6">
-        <%= form.label :alt_grid_layout, class: "label" %>
+        <%= form.label 'Alt (7 body images)', class: "label font-normal" %>
         <%= form.check_box :alt_grid_layout, class: "boolean" %>
       </div>
 
       <div class="mb-6">
-        <%= form.label :thesis_grid_layout, class: "label" %>
+        <%= form.label 'Thesis (10 body images)', class: "label font-normal" %>
         <%= form.check_box :thesis_grid_layout, class: "boolean" %>
       </div>
 
       <div class="mb-6">
-        <%= form.label :two_grid_layout, class: "label" %>
+        <%= form.label '2x2 (10 body images)', class: "label font-normal" %>
         <%= form.check_box :two_grid_layout, class: "boolean" %>
       </div>
 
       <div class="mb-6">
-        <%= form.label :three_grid_layout, class: "label" %>
+        <%= form.label '3x3 (10 body images)', class: "label font-normal" %>
         <%= form.check_box :three_grid_layout, class: "boolean" %>
       </div>
     </div>
