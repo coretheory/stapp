@@ -42,3 +42,12 @@ en:
   hello: "Hello, world!"
   welcome: "Welcome!"
   coming_soon_html: "Coming soon..."
+  contacts:
+    new:
+      contact_us_html: "Contact us"
+      company_html: "Company"
+      first_name_html: "First name"
+      last_name_html: "Last name"
+      email_html: "Email"
+      message_html: "Message"
+      send_message_html: "Send message"

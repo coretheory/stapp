@@ -11,3 +11,12 @@ es:
   hello: "¡Hola, Mundo!"
   welcome: "¡Bienvenido!"
   coming_soon_html: "Próximamente..."
+  contacts:
+    new:
+      contact_us_html: "Contactarnos"
+      company_html: "Compañía"
+      first_name_html: "Nombre de pila"
+      last_name_html: "Apellido "
+      email_html: "Email"
+      message_html: "Mensaje"
+      send_message_html: "Enviar mensaje"
