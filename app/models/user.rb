@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_save { self.username = username.downcase }
+
   extend FriendlyId
   friendly_id :username, use: :slugged
   # Include default devise modules. Others available are:
