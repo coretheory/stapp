@@ -6,7 +6,7 @@
 
 	<div class="pl-6 md:col-span-2">
 		<div class="text-title">
-			<h1 class=text-3xl><%= t('.contact_us_html').upcase %></h1>
+			<h1 class=text-3xl><%= t('.contact_us').upcase %></h1>
 		</div>
     <div>
 	    <%= form_for @contact do |form| %>
@@ -25,28 +25,28 @@
 		    <% end %>
 
 		    <div class="mt-6 mb-6">
-			    <%= form.label t('.company_html').upcase, class: 'text-title text-lg font-light label' %>
+			    <%= form.label t('.company').upcase, class: 'text-title text-lg font-light label' %>
 			    <%= form.text_field :company, required: true, minlength: 2, maxlength: 50, class: 'input' %>
 		  	</div>
 
 		    <div class="flex mb-6">
 			    <div class="flex-1 first_name">
-				    <%= form.label t('.first_name_html').upcase, class: 'text-title text-lg font-light label' %>
+				    <%= form.label t('.first_name').upcase, class: 'text-title text-lg font-light label' %>
 				    <%= form.text_field :first_name, required: true, minlength: 2, maxlength: 25, class: 'input' %>
 			  	</div>
 			  	<div class="flex-1 last_name ml-4">
-				    <%= form.label t('.last_name_html').upcase, class: 'text-title text-lg font-light label' %>
+				    <%= form.label t('.last_name').upcase, class: 'text-title text-lg font-light label' %>
 				    <%= form.text_field :last_name, required: true, minlength: 2, maxlength: 25, class: 'input' %>
 			  	</div>
 		  	</div>
 
 		    <div class="mb-6">
-			    <%= form.label t('.email_html').upcase, class: 'text-title text-lg font-light label' %>
+			    <%= form.label t('.email').upcase, class: 'text-title text-lg font-light label' %>
 			    <%= form.email_field :email, required: true, maxlength: 250, class: 'input' %>
 		  	</div>
 
 		    <div class="mb-6">
-			    <%= form.label t('.message_html').upcase, class: 'text-title text-lg font-light label' %>
+			    <%= form.label t('.message').upcase, class: 'text-title text-lg font-light label' %>
 			    <%= form.text_area :message, as: :text, required: true, minlength: 20, maxlength:2000, class: 'input' %>
 		  	</div>
 
@@ -56,7 +56,7 @@
 				</div>
 
 		    <div class="mb-6">
-			    <%= form.submit t('.send_message_html'), class: "btn btn-black" %>
+			    <%= form.submit t('.send_message'), class: "btn btn-black" %>
 			  </div>
 		  <% end %>
 
@@ -67,7 +67,7 @@
 	<div class="about-extra-content md:col-span-1">
 		<div class="vertical-line-contact">
 			<div class="text-title pt-0 mt-0 pl-4 mb-4 pb-4"> 
-				<h3 class="text-xl"><%= t('contact_link_html').upcase %></h3>
+				<h3 class="text-xl"><%= t('contact_link').upcase %></h3>
 				<ul class="list-none">
 					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
 					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
@@ -75,7 +75,7 @@
 			</div>
 
 			<div class="text-title pl-4 mt-2 pt-2"> 
-				<h3 class="text-xl"><%= t('learn_more_link_html').upcase %></h3>
+				<h3 class="text-xl"><%= t('learn_more_link').upcase %></h3>
 				<ul class="list-none">
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.coretheorystudios.com", target: "_blank" do %>

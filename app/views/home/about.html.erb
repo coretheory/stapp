@@ -6,21 +6,21 @@
 
 	<div class="pl-6 md:col-span-2">
 		<div class="text-title">
-			<h1 class=text-3xl><%= "About".upcase %></h1>
+			<h1 class=text-3xl><%= t('about_link').upcase %></h1>
 		</div>
 		<div class="text-paragraph-body mr-5 pr-10">
-			<p class="text-left mb-3">I am an interdisciplinary designer, formally trained in the architecture industry. As an entrprenuer and co-founder, I am passionate about projects and careers that shatter boundaries. With a diverse and novel toolset that encompasses both the business and creative scope, I enjoy creating spaces and products that captivate one's presence and engage the imagination.</p>
-			<p class="text-left font-light text-sm text-gray-600 mb-3">My formal training in architecture transpired at the Southern California Institute of Architecture (SCI-Arc), culminating in my B.Arch degree in 2018. During my studies, I interned at various award-winning firms and received awards for my academic work, including a 2018 Thesis Merit Prize and 1st Place in Sun-Cal's Flat Figures competition in 2015. I also served as the 2018 Editor-in-Chief for Underscore's fourth publication, HB+C, and as Academic Councilor for the bachelor's program at SCI-Arc.</p>
-			<p class="text-left font-light text-sm text-gray-600 mb-3">After graduation, I dove head-first into the entreprenurial world, co-founding a 100% remote, public benefit, creative and game development studio, Core Theory, with my fiancé. It has been an exciting and insightful experience that has involved business administration, illustration, 3d modeling, character rigging, marketing, and graphic design work. We are proud to be partnered with 1% For the Planet, B Lab (as a Certified B Corp pending), The Land Institute, Wild Salmon Center, Pacific Forest Trust, and the United Nations Climate Council.</p>
-			<p class="text-left font-light text-sm text-gray-600 mb-3">I am available for consulting and contractual work in the architectural and design industries, with a special interest in full-time employment in an architectural environment that shares my love for craft, detail, and context. I have a fully-equipped remote office capable of administering and producing in an architectural and 3d environment, as well as extensive experience and knowledge in remote work.</p>
-			<p class="text-left font-light text-sm text-gray-600 mb-3">Lastly, if you are simply in need of a remote consultant to help your business transition to remote work (or prepare for the future), then I can help you establish the best remote practices for a happy, productive, and successful work environment for your employees and business.</p>
+			<p class="text-left mb-3"><%= t('.about_intro') %></p>
+			<p class="text-left font-light text-sm text-gray-600 mb-3"><%= t('.about_paragraph_one') %></p>
+			<p class="text-left font-light text-sm text-gray-600 mb-3"><%= t('.about_paragraph_two') %></p>
+			<p class="text-left font-light text-sm text-gray-600 mb-3"><%= t('.about_paragraph_three') %></p>
+			<p class="text-left font-light text-sm text-gray-600 mb-3"><%= t('.about_conclusion') %></p>
 		</div>
 	</div>
 
 	<div class="about-extra-content md:col-span-1">
 		<div class="vertical-line-contact">
 			<div class="text-title pt-0 mt-0 pl-4 mb-4 pb-4"> 
-				<h3 class="text-xl"><%= "Contact".upcase %></h3>
+				<h3 class="text-xl"><%= t('contact_link').upcase %></h3>
 				<ul class="list-none">
 					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-900" %></li>
 					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-900" %></li>
@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="text-title pl-4 mt-2 pt-2"> 
-				<h3 class="text-xl"><%= "Learn More".upcase %></h3>
+				<h3 class="text-xl"><%= t('learn_more_link').upcase %></h3>
 				<ul class="list-none">
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.coretheorystudios.com", target: "_blank" do %>
