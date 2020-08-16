@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 	get '/about', to: "home#about"
   get '/contact', to: "contacts#new", as: 'contact'
-  resource :contacts, only: [:create]
+  post '/contact', to: "contacts#create", as: 'contacts'
 
   resources :projects
   get '/gallery', to: "projects#gallery"
