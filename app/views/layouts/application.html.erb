@@ -21,5 +21,11 @@
     <div class="relative w-full bg-gray-300 md:my-12 md:py-12">
       <%= render "shared/footer" %>
     </div>
+
+    <% if Rails.env.development? %>
+      <div class="px-4 mx-4 py-4 mb-8 card bg-red-100" style="margin-top: 45px;">
+        <%= debug(params) if Rails.env.development? %>
+      </div>
+    <% end %>
   </body>
 </html>
