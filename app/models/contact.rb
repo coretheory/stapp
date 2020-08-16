@@ -12,7 +12,7 @@ class Contact < MailForm::Base
   validates :email, presence: true, length: { maximum: 250 }, format: { with: VALID_EMAIL_REGEX }
 
   attribute :company
-  validates :company, presence: true, length: { minimum: 2, maximum: 50 }, format: { with: VALID_NAME_REGEX }
+  validates :company, presence: true, length: { minimum: 2, maximum: 50 }
 
   attribute :message
   validates :message, presence: true, length: { minimum: 20, maximum: 2000}
