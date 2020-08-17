@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :users, only: [:show], as: "profile"
+
+  authenticate :user, ->(user) { user.admin? } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end
