@@ -15,8 +15,7 @@ es:
     new:
       contact_us: "Contactarnos"
       company: "Compañía"
-      first_name: "Nombre de pila"
-      last_name: "Apellido "
+      name: "Nombre"
       email: "Email"
       message: "Mensaje"
       send_message: "Enviar mensaje"

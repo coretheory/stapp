@@ -46,8 +46,7 @@ en:
     new:
       contact_us: "Contact us"
       company: "Company"
-      first_name: "First name"
-      last_name: "Last name"
+      name: "Name"
       email: "Email"
       message: "Message"
       send_message: "Send message"

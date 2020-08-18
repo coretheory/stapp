@@ -39,6 +39,7 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 # Other
 gem 'friendly_id', '~> 5.3'
 gem 'meta-tags', '~> 2.13'
+gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 
 # Server

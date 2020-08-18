@@ -4,7 +4,7 @@
 	<%= image_tag "photos/Final_Section_SCIARC.png", alt: "Thesis Large Chunk" %>
 	</div>
 
-	<div class="pl-6 md:col-span-2">
+	<div class="pl-6 md:col-span-2 pr-2">
 		<div class="text-title">
 			<h1 class=text-3xl><%= t('.contact_us').upcase %></h1>
 		</div>
@@ -30,13 +30,9 @@
 		  	</div>
 
 		    <div class="flex mb-6">
-			    <div class="flex-1 first_name">
-				    <%= form.label t('.first_name').upcase, class: 'text-title text-lg font-light label' %>
-				    <%= form.text_field :first_name, required: true, minlength: 2, maxlength: 25, class: 'input' %>
-			  	</div>
-			  	<div class="flex-1 last_name ml-4">
-				    <%= form.label t('.last_name').upcase, class: 'text-title text-lg font-light label' %>
-				    <%= form.text_field :last_name, required: true, minlength: 2, maxlength: 25, class: 'input' %>
+			    <div class="flex-1 name">
+				    <%= form.label t('.name').upcase, class: 'text-title text-lg font-light label' %>
+				    <%= form.text_field :name, required: true, minlength: 2, maxlength: 25, class: 'input' %>
 			  	</div>
 		  	</div>
 
