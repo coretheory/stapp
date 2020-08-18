@@ -6,8 +6,8 @@ class Contact < ApplicationRecord
 
   attribute :nickname, :captcha  => true
 
-  validates :first_name, presence: true, length: { minimum: 2, maximum: 25}, format: { with: VALID_NAME_REGEX }
-  validates :last_name, presence: true, length: { minimum: 2, maximum: 25}, format: { with: VALID_NAME_REGEX }
+  validates :first_name, presence: true, format: { with: VALID_NAME_REGEX }
+  validates :last_name, presence: true, format: { with: VALID_NAME_REGEX }
   validates :email, presence: true, length: { maximum: 250 }, format: { with: VALID_EMAIL_REGEX }
   validates :company, length: { maximum: 50 }
   validates :message, presence: true, length: { minimum: 20, maximum: 2000}
