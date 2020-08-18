@@ -9,6 +9,6 @@ class ContactMailer < ApplicationMailer
   def new_contact
     @contact = params[:contact]
 
-    mail(to: "hello@sarathayer.com", subject: "New Contact from #{@contact.first_name} #{@contact.last_name} <#{@contact.email}> | SARATHAYER.COM")
+    mail(to: "hello@sarathayer.com", subject: "New Contact from #{@contact.name.full} <#{@contact.email}> | SARATHAYER.COM")
   end
 end
