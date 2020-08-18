@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        ContactMailer.with(contact: @contact).new_contact.deliver_now
+        ContactMailer.with(contact: @contact).new_contact.deliver_later
         format.html { redirect_to root_path, notice: 'Thank you for your message. We will contact you soon!' }
       else
         format.html { render :new, notice: 'Your message could not be sent, please try again.' }
