@@ -18,7 +18,6 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    #@contact.request = request
 
     respond_to do |format|
       if @contact.save
