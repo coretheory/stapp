@@ -1,3 +1,5 @@
+<% provide(:title, "My Profile") %>
+
 <div class="bg-white text-black pt-6 md:mt-12 md:pt-12">
 	  <div class="container lg:p-10 p-4">
 	    <h1 class="lg:text-3xl text-lg"><%= @user.username.capitalize %>'s Profile</h1>
@@ -21,6 +23,7 @@
     <% if user_signed_in? %>
       <%= link_to "New post", new_post_path, class: "btn btn-outline btn-small w-full block my-2" %>
       <%= link_to 'Add project', new_project_path, class: "btn btn-black btn-small w-full block my-2" %>
+      <%= link_to "Contacts", contacts_path, class: "btn btn-white btn-small w-full block my-2" %>
     <% else %>
       <%= link_to "Login", new_user_session_path, class: "btn btn-white btn-small w-full block my-2" %>
       <%= link_to "Sign Up", new_user_session_path, class: "btn btn-purple btn-small w-full block my-2" %>

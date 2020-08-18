@@ -5,6 +5,7 @@ class Ability
 
   def initialize(user)
     can [:front_page_gallery, :gallery, :arc_design_index, :graphic_design_index, :illustration_index, :product_design_index, :read], [Post, Project]
+    can [:new, :create], [Contact]
     return unless user.present?
     can :manage, Post, user_id: user.id
     return unless user.admin?

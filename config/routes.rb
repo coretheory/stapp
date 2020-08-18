@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 	root to: "projects#front_page_gallery"
 
 	get '/about', to: "home#about"
-  get '/contact', to: "contacts#new", as: 'contact'
-  post '/contact', to: "contacts#create", as: 'contacts'
+
+  resources :contacts, except: [:new, :create]
+  get '/contact', to: "contacts#new", as: "contact_new_form"
+  post '/contact', to: "contacts#create", as: "contact_create_form"
 
   resources :projects
   get '/gallery', to: "projects#gallery"

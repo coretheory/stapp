@@ -1,0 +1,36 @@
+<% provide(:title, "All Contacts") %>
+
+<% content_for :primary_content do %>
+  <div id="contact_cards" class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <% @contact.each do |c| %>
+	    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+	    	<% if user_signed_in? && current_user.admin?  %>
+			    <span class="absolute mt-4 ml-4 flex justify-end">
+			      <%= link_to c, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
+			        <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
+			      <% end %>
+			    </span>
+			  <% end %>
+			  <img class="w-full" src="https://v0.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+			  <div class="px-6 py-4">
+			  	<div class="flex justify-between">
+			    	<div class="font-bold text-title text-xl mb-2"><%= c.first_name.upcase %> <%= c.last_name.upcase %></div> 
+			    	<div class="text-paragrpah-body text-md font-light space-x-0"> <%= c.company.upcase if present? %></div>
+			  	</div>
+			    <p class="text-paragraph-body text-grey-darker text-base">
+			      <%= c.message %>
+			    </p>
+			  </div>
+			  <div class="flex justify-center px-6 py-4">
+			    <%= link_to c.email, "mailto:#{c.email}", class: "bg-purple-300 rounded-full shadow px-4 py-2 font-light text-white text-paragraph-body" %>
+			  </div>
+			</div>
+    <% end %>
+  </div>
+ <% end %>
+
+<% content_for :secondary_content do %>
+  
+<% end %>
+
+<%= render 'index_layout' %>
