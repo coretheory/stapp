@@ -5,9 +5,12 @@ Rails.application.routes.draw do
 
 	get '/about', to: "home#about"
 
-  resources :contacts
-  get '/contact', to: "contacts#new", as: "contact_new_form"
-  post '/contact', to: "contacts#create", as: "contact_create_form"
+  resources :contacts, only: [:edit, :update, :destroy]
+  get '/contact', to: "contacts#new", as: "new_contact"
+  get '/contact/:id', to: "contacts#show"
+  get '/contacts', to: "contacts#index", as: "contacts"
+  post '/contact', to: "contacts#create"
+
 
   resources :projects
   get '/gallery', to: "projects#gallery"

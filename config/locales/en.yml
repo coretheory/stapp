@@ -42,6 +42,7 @@ en:
   hello: "Hello, world!"
   welcome: "Welcome!"
   coming_soon: "Coming soon..."
+  unauthorized_access: "Woops, looks like that doesn't exist yet."
   contacts:
     new:
       contact_us: "Contact us"

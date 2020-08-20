@@ -11,6 +11,7 @@ es:
   hello: "¡Hola, Mundo!"
   welcome: "¡Bienvenido!"
   coming_soon: "Próximamente..."
+  unauthorized_access: "Woops, parece que eso aún no existe."
   contacts:
     new:
       contact_us: "Contactarnos"
