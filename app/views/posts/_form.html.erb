@@ -14,7 +14,7 @@
 
   <div class="mb-6">
     <%= form.label :header_image, class: "label" %>
-    <%= form.file_field :header_image, direct_upload: true %>
+    <%= form.file_field :header_image %>
   </div>
 
   <div class="mb-6">
@@ -34,7 +34,7 @@
 
   <div class="mb-6">
     <%= form.label :uploads, class: "label" %>
-    <%= form.file_field :uploads, multiple: true, direct_upload: true %>
+    <%= form.file_field :uploads, multiple: true %>
   </div>
 
   <div class="mb-6">
