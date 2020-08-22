@@ -20,7 +20,7 @@
           <%= image_tag @project.header_image.representation(resize_to_fit: [200, 200]) %>
         <% end %>
       </div>
-      <%= form.file_field :header_image, direct_upload: true %>
+      <%= form.file_field :header_image %>
     </div>   
 
     <div class="mb-6">
@@ -94,7 +94,7 @@
           <% end %>
         <% end %>
       </div>
-      <%= form.file_field :body_images, multiple: true, direct_upload: true %>
+      <%= form.file_field :body_images, multiple: true %>
     </div>
 
     <div class="mb-6">
@@ -104,7 +104,7 @@
           <%= image_tag @project.footer_image.representation(resize_to_fit: [200, 200]) %>
         <% end %>
       </div>
-      <%= form.file_field :footer_image, direct_upload: true %>
+      <%= form.file_field :footer_image %>
     </div> 
 
     <div class="pt-4 mb-3">
