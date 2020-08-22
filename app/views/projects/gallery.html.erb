@@ -4,7 +4,7 @@
   <div class="w-full pr-0 md:pr-6 mb-6">
     <div class="bg-white">
       <% if @projects.exists? %>
-        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-2">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <% @projects.each do |project| %>
             <% if project.body_images.attached? %>
               <% project.body_images.each do |body_image| %>
