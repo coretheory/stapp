@@ -1,7 +1,7 @@
 <% provide(:title, "All Contacts") %>
 
 <% content_for :primary_content do %>
-  <div id="contact_cards" class="grid grid-cols-1 gap-4 md:grid-cols-3">
+  <div id="contact_cards" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     <% @contact.each do |c| %>
 	    <div class="max-w-sm rounded overflow-hidden shadow-lg">
 	    	<% if user_signed_in? && current_user.admin?  %>
