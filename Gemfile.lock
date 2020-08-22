@@ -265,7 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   activestorage-office-previewer (~> 0.1.2)
-  aws-sdk-s3
+  aws-sdk-s3 (~> 1.78)
   bootsnap (>= 1.4.2)
   brakeman (~> 4.9)
   byebug
