@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_22_044031) do
+ActiveRecord::Schema.define(version: 2020_08_22_201941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,11 +49,11 @@ ActiveRecord::Schema.define(version: 2020_08_22_044031) do
   create_table "contacts", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
     t.string "company"
-    t.text "message"
+    t.text "message", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -68,13 +68,14 @@ ActiveRecord::Schema.define(version: 2020_08_22_044031) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.string "slug"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
+    t.index ["title"], name: "index_posts_on_title", unique: true
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -82,9 +83,9 @@ ActiveRecord::Schema.define(version: 2020_08_22_044031) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.string "title"
-    t.string "year"
-    t.string "project_type"
+    t.string "title", null: false
+    t.string "year", null: false
+    t.string "project_type", null: false
     t.string "subtitle"
     t.boolean "two_grid_layout"
     t.boolean "three_grid_layout"
@@ -96,6 +97,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_044031) do
     t.boolean "product_design"
     t.string "slug"
     t.index ["slug"], name: "index_projects_on_slug", unique: true
+    t.index ["title"], name: "index_projects_on_title", unique: true
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
@@ -107,7 +109,7 @@ ActiveRecord::Schema.define(version: 2020_08_22_044031) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "username"
+    t.string "username", null: false
     t.boolean "admin", default: false
     t.string "slug"
     t.string "language"

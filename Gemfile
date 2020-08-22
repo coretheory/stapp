@@ -59,6 +59,7 @@ end
 
 group :development do
 	gem 'brakeman', '~> 4.9'
+  gem 'database_consistency', '~> 0.8.4', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end

@@ -14,8 +14,6 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
-  validates_uniqueness_of :username
-  validates_presence_of :username
-  validates_uniqueness_of :email
-  validates_presence_of :email
+  validates :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
 end

@@ -9,6 +9,6 @@ class Post < ApplicationRecord
 	has_one_attached :header_image
 	has_many_attached :uploads
 	
-	validates :title, presence: true
+	validates :title, presence: true, uniqueness: true
   validates :body, length: { maximum: 8000 }
 end

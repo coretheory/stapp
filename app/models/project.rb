@@ -13,8 +13,8 @@ class Project < ApplicationRecord
 	has_one_attached :footer_image
 	has_many_attached :body_images
 
-	validates_presence_of :title
-	validates_presence_of :year
-	validates_presence_of :project_type
-	validates_presence_of :user_id
+	validates :title, presence: true, uniqueness: true
+	validates :year, presence: true
+	validates :project_type, presence: true
+	validates :user_id, presence: true
 end
