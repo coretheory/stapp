@@ -11,7 +11,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Active Storage
 gem 'activestorage-office-previewer', '~> 0.1.2'
-gem 'aws-sdk-s3', '~> 1.78'
+gem 'aws-sdk-s3', '~> 1.78', require: false
 gem 'image_processing', '~> 1.2'
 
 # Authentication & Authorization
