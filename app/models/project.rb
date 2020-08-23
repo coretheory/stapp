@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
 	extend FriendlyId
-  friendly_id :slug_candidates, use: [:slugged, :finders]
+  friendly_id :slug_candidates, use: :slugged
   
 	belongs_to :user
 
@@ -17,8 +17,4 @@ class Project < ApplicationRecord
 	validates :year, presence: true
 	validates :project_type, presence: true
 	validates :user_id, presence: true
-
-	def slug_candidates
-		[[:title, :subtitle]]
-	end
 end
