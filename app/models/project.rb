@@ -19,6 +19,6 @@ class Project < ApplicationRecord
 	validates :user_id, presence: true
 
 	def slug_candidates
-		[:title, :subtitle]
+		[[:title, :subtitle]]
 	end
 end
