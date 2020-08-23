@@ -14,7 +14,7 @@
     <% end %>
 
     <div class="mb-6">
-      <%= form.label :header_image class: "label" %>
+      <%= form.label :header_image, class: "label" %>
       <div class="mb-6">
         <% if @project.header_image.attached? %>
           <%= image_tag @project.header_image.representation(resize_to_fit: [200, 200]) %>
