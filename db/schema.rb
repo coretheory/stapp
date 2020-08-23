@@ -75,7 +75,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_201941) do
     t.bigint "user_id"
     t.string "slug"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
-    t.index ["title"], name: "index_posts_on_title", unique: true
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -97,7 +96,6 @@ ActiveRecord::Schema.define(version: 2020_08_22_201941) do
     t.boolean "product_design"
     t.string "slug"
     t.index ["slug"], name: "index_projects_on_slug", unique: true
-    t.index ["title"], name: "index_projects_on_title", unique: true
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
