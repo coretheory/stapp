@@ -1,6 +1,6 @@
 class Project < ApplicationRecord
 	extend FriendlyId
-  friendly_id :slug_candidates, use: :slugged
+  friendly_id :title, use: [:slugged]
   
 	belongs_to :user
 
@@ -17,4 +17,8 @@ class Project < ApplicationRecord
 	validates :year, presence: true
 	validates :project_type, presence: true
 	validates :user_id, presence: true
+
+	def should_generate_new_friendly_id?
+    slug.blank? && title_changed?
+  end
 end
