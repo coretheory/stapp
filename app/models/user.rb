@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  before_save { self.username = username.downcase }
-  before_save { self.email = email.downcase }
+  before_save :downcase_email
+  before_save :downcase_username
 
   extend FriendlyId
   friendly_id :username, use: :slugged
@@ -16,4 +16,14 @@ class User < ApplicationRecord
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
+
+  private
+
+    def downcase_email
+      email.downcase!
+    end
+
+    def downcase_username
+      username.downcase!
+    end
 end
