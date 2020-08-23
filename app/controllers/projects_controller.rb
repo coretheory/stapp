@@ -45,9 +45,6 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = current_user.projects.build(project_params)
-    @project.header_image.attach(params[:project][:header_image])
-    @project.body_images.attach(params[:project][:body_images])
-    @project.footer_image.attach(params[:project][:footer_image])
 
     respond_to do |format|
       if @project.save
