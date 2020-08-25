@@ -1,39 +1,37 @@
-<div class="leading-normal pt-4 pb-6 text-2xl text-center m-auto my-2 mr-5 pr-12 ml-0 pl-0">
-          <%= "Project info".upcase %>
+<div class="text-title text-2xl text-center mt-8 pt-8 pb-6">
+  <%= "Project info".upcase %>
 </div>
 
-<div class="flex flex-row flex-wrap justify-center align-items-center pb-8">
+<div class="grid grid-cols-2 text-paragraph-body font-light mb-10 pb-10">
 
-  <div class="flex flex-wrap flex-row justify-center" style="flex-direction: column;">
+  <div class="grid col-span-1 flex space-y-4" style="flex-direction: column; display: inline;">
     
-    <div class="flex-auto leading-normal text-base text-left pb-6">
+    <div class="flex justify-end align-top mr-2">
       Project Year
     </div>
 
-    <div class="flex-auto leading-normal text-base text-left pb-8">
-      Project Team
+    <div class="flex justify-end align-top mr-2">
+      Project Type
     </div>
 
-    <div class="flex-auto leading-normal text-base text-left pt-8 pb-6">
-      Project Type
+    <div class="flex justify-end align-top mr-2">
+      Project Team
     </div>
 
   </div>
   
-  <div class="vertical-line-project mx-6 flex justify-center" style="justify-content: space-around; align-items: center; justify-content: center;"></div>
-  
-  <div class="flex flex-wrap flex-row justify-center" style="flex-direction: column;">
+  <div class="grid col-span-1 border-l flex space-y-4" style="flex-direction: column; display: inline;">
 
-    <div class="flex-auto leading-normal text-base text-left pb-6">
+    <div class="flex justify-start align-top ml-2">
       <%= @project.year %>
     </div>
 
-    <div class="flex-auto leading-normal text-base text-left pb-8">
-      <%= @project.project_team %>
+    <div class="flex justify-start align-top ml-2">
+      <%= @project.project_type %>
     </div>
 
-    <div class="flex-auto leading-normal text-base text-left pt-4 pb-6">
-      <%= @project.project_type %>
+    <div class="flex justify-start align-top ml-2">
+      <%= @project.project_team %>
     </div>
 
   </div>

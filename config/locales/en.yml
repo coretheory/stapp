@@ -30,10 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  arc_design_link: "Architectural design"
-  graphic_design_link: "Graphic design"
+  arc_design_link: "Architectural Design"
+  graphic_design_link: "Graphic Design"
   illustration_link: "Illustration"
-  product_design_link: "Product design"
+  product_design_link: "Product Design"
   about_link: "About"
   contact_link: "Contact"
   gallery_link: "Gallery"

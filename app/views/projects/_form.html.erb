@@ -70,7 +70,7 @@
       <%= form.rich_text_area :project_team, class: "input" %>
     </div>
 
-    <div class="mb-6">
+    <div class=" flexmb-6">
       <%= form.label :intro, class: "label" %>
       <%= form.rich_text_area :intro, class: "input" %>
     </div>
@@ -112,14 +112,10 @@
       </div>
     
     <div class="flex justify-between pb-4">
-      <div class="mb-6">
-        <%= form.label 'Alt (7 body images)', class: "label font-normal" %>
-        <%= form.check_box :alt_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
-      </div>
 
       <div class="mb-6">
-        <%= form.label 'Thesis (10 body images)', class: "label font-normal" %>
-        <%= form.check_box :thesis_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
+        <%= form.label '1x1 (Unlimited body images)', class: "label font-normal" %>
+        <%= form.check_box :one_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
       </div>
 
       <div class="mb-6">
@@ -131,6 +127,17 @@
         <%= form.label '3x3 (10 body images)', class: "label font-normal" %>
         <%= form.check_box :three_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
       </div>
+
+      <div class="mb-6">
+        <%= form.label 'Alt (7 body images)', class: "label font-normal" %>
+        <%= form.check_box :alt_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
+      </div>
+
+      <div class="mb-6">
+        <%= form.label 'Thesis (10 body images)', class: "label font-normal" %>
+        <%= form.check_box :thesis_grid_layout, class: "form-checkbox text-black focus:shadow-none focus:border-black mr-2 leading-tight" %>
+      </div>
+
     </div>
 
     <div class="mb-6">

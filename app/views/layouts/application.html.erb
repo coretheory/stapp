@@ -23,8 +23,8 @@
     </div>
 
     <% if Rails.env.development? %>
-      <div class="px-4 mx-4 py-4 mb-8 card bg-red-100" style="margin-top: 45px;">
-        <%= debug(params) if Rails.env.development? %>
+      <div class="grid grid-cols-1 flex flex-wrap px-4 mx-4 py-4 mb-8 card bg-red-100" style="margin-top: 45px;">
+        <p><%= debug(params) if Rails.env.development? %></p>
       </div>
     <% end %>
   </body>

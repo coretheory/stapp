@@ -1,15 +1,13 @@
 <% if user_signed_in? && current_user.id == @project.user_id  %>
-  <div class="flex flex-wrap mr-5 pr-10 ml-0 pl-0" style="flex-direction: column;">
-    <p class="text-gray-700 font-normal text-sm inline-block text-center mr-5 pr-8 ml-0 mr-0">Project by <%= link_to "#{project.user.username}", profile_path(project.user), class:"no-underline text-gray-700 font-normal hover:text-gray-700 hover:underline" %> <%= time_ago_in_words(project.created_at) %> ago
-      <div class="pt-2 flex justify-center text-center m-auto mr-5 pr-8 pl-0 ml-0">
-        <%= link_to edit_project_path(@project), class:"no-underline mr-2" do %>
-          <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
-        <% end %>
+  <p class="text-gray-700 font-normal text-sm text-center">Project by <%= link_to "#{project.user.username}", profile_path(project.user), class:"no-underline text-gray-700 font-normal hover:text-gray-700 hover:underline" %> <%= time_ago_in_words(project.created_at) %> ago
+    <div class="pt-2 flex justify-center text-center m-auto pb-4">
+      <%= link_to edit_project_path(@project), class:"no-underline mr-2" do %>
+        <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
+      <% end %>
 
-        <%= link_to @project, method: :delete, class: "no-underline", data: { confirm: 'Are you sure?' } do %>
-          <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
-        <% end %>
-      </div>
-    </p>
-  </div>
+      <%= link_to @project, method: :delete, class: "no-underline", data: { confirm: 'Are you sure?' } do %>
+        <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
+      <% end %>
+    </div>
+  </p>
 <% end %>
