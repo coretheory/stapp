@@ -1,16 +1,58 @@
 <% provide(:title, "My Profile") %>
 
 <div class="bg-white text-black pt-6 md:mt-12 md:pt-12">
-	  <div class="container lg:p-10 p-4">
+	  <div class="container pt-10 pb-10">
 	    <h1 class="lg:text-3xl text-lg"><%= @user.username.capitalize %>'s Profile</h1>
 	  </div>
 </div>
 
 <% content_for :primary_content do %>
-  <div id="profile_posts">
-    <% @user.posts.each do |post| %>
-      <%= render 'posts/post', post: post %>
+  <div class="grid md:grid-cols-2 gap-4">
+
+    <% if @user.posts.present? && @user.projects.present? %>
+
+      <div class="grid col-span-1" id="profile_posts">
+        <div class="shadow-lg rounded">
+          <div class="text-title text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
+          <% @user.posts.each do |post| %>
+            <%= render 'posts/post', post: post %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="grid col-span-1" id="profile_projects">
+        <div class="shadow-lg rounded">
+          <div class="text-title text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
+          <% @user.projects.each do |project| %>
+            <%= render 'projects/project', project: project %>
+          <% end %>
+        </div>
+      </div>
+
+    <% elsif @user.posts.present? && !@user.projects.present? %>
+
+      <div class="grid md:col-span-2" id="profile_posts">
+        <div class="shadow-lg rounded">
+          <div class="text-title text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
+          <% @user.posts.each do |post| %>
+            <%= render 'posts/post', post: post %>
+          <% end %>
+        </div> 
+      </div>
+
+    <% elsif @user.projects.present? && !@user.posts.present? %>
+
+      <div class="grid md:col-span-2" id="profile_projects">
+        <div class="shadow-lg rounded">
+          <div class="text-title text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
+          <% @user.projects.each do |project| %>
+            <%= render 'projects/project', project: project %>
+          <% end %>
+        </div>
+      </div>
+
     <% end %>
+
   </div>
  <% end %>
 
