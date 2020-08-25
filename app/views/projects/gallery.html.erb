@@ -1,14 +1,14 @@
 <% provide(:title, "Gallery") %>
 
 <div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
-  <div class="w-full pr-0 md:pr-6 mb-6">
+  <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
     <div class="bg-white">
       <% if @projects.exists? %>
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <% @projects.each do |project| %>
+          <% @projects.shuffle.each do |project| %>
             <% if project.body_images.attached? %>
-              <% project.body_images.each do |body_image| %>
-                <div>
+              <% project.body_images.shuffle.each do |body_image| %>
+                <div class="shadow-lg rounded">
                   <%= link_to image_tag(body_image), project %>
                 </div>
               <% end %>

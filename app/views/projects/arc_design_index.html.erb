@@ -1,7 +1,7 @@
 <% provide(:title, "Architectural Design") %>
 
 <div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
-  <div class="w-full pr-0 md:pr-6 mb-6">
+  <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
     <div class="bg-white">
       <% if @projects.exists? %>
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-2">
@@ -13,16 +13,6 @@
                 <div class="text-paragraph-body font-light">
                   <%= project.project_type %>
                 </div>
-              </div>
-              <% else %>
-              <div class="grid col-span-1 md:col-span-2 block justify-center p-10 text-center">
-                <div class="flex justify-center mt-10 pt-10 lg:mt-2 pb-4">
-                  <%= render_svg 'icons/pen' %>
-                </div>
-                <p class="mb-4">Coming soon... </p>
-                <% if user_signed_in? && current_user.admin? %>
-                    <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-black btn-small" %>
-                  <% end %>
               </div>
             <% end %>
           <% end %>

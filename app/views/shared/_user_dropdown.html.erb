@@ -6,15 +6,15 @@
       <%= render_svg 'icons/chevron-down', styles: "icon-sm fill-current" %>
     <% end %>
 
-    <div data-target="dropdown.menu" class="dropdown left-0 rounded-md shadow-lg bg-white border-gray-500" aria-expanded="false">
-      <ul class="list-none pb-4"><h5 class="uppercase text-md tracking-widest text-gray-500 ml-2 py-2">My Stuff</h5>
-        <li><%= link_to profile_path(current_user), class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-white hover:font-medium hover:bg-pink-400 py-2" do %>
+    <div data-target="dropdown.menu" class="dropdown left-0 rounded-md shadow-lg bg-white border-gray-600" aria-expanded="false">
+      <ul class="list-none pb-4"><h5 class="uppercase text-md tracking-widest text-gray-600 ml-2 py-2">My Stuff</h5>
+        <li><%= link_to profile_path(current_user), class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-white hover:font-medium hover:bg-pink-400 py-2" do %>
           <%= render_svg 'icons/person-badge', styles: "icon-md fill-current ml-2 mr-3" %> My Profile
         <% end %></li>
-        <li><%= link_to edit_user_registration_path, class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-white hover:font-medium hover:bg-pink-400 py-2" do %>
+        <li><%= link_to edit_user_registration_path, class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-white hover:font-medium hover:bg-pink-400 py-2" do %>
           <%= render_svg 'icons/sliders', styles: "icon-md fill-current ml-2 mr-3" %> Account Settings
         <% end %></li>
-        <li><%= link_to destroy_user_session_path, method: :delete, class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-white hover:font-medium hover:bg-pink-400 py-2"  do %>
+        <li><%= link_to destroy_user_session_path, method: :delete, class: "flex justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-white hover:font-medium hover:bg-pink-400 py-2"  do %>
          <%= render_svg 'icons/door-closed', styles: "icon-md fill-current ml-2 mr-3" %> Sign out
         <% end %></li>
       </ul>

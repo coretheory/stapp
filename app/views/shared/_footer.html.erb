@@ -6,55 +6,55 @@
   </div>
   <div class="col-span-1 mt-10 md:mt-8">
     <div class="vertical-line-footer">
-      <%= link_to t('gallery_link').upcase, gallery_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4" %>
-      <%= link_to t('about_link').upcase, about_path, class: "flex justify-center md:justify-start text-l text-sidebar-nav text-black mt-4 hover:text-gray-700 md:pl-4" %>
-      <%= link_to t('contact_link').upcase, new_contact_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4" %>
-      <ul class="list-none md:pl-4">
-        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
-        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
+      <%= link_to t('gallery_link').upcase, gallery_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-5" %>
+      <%= link_to t('about_link').upcase, about_path, class: "flex justify-center md:justify-start text-l text-sidebar-nav text-black mt-4 hover:text-gray-700 md:pl-5" %>
+      <%= link_to t('contact_link').upcase, new_contact_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-5" %>
+      <ul class="list-none md:pl-5">
+        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-600 hover:text-gray-700 mt-1 leading-tight" %></li>
+        <li class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-600 hover:text-gray-700 mt-1 leading-tight" %></li>
       </ul>
     </div>
   </div>
   <div class="col-span-1 mt-2 md:mt-8">
     <div class="vertical-line-footer">
-      <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 md:pl-4"><%= t('projects_link').upcase %></div>
-      <ul class="list-none md:pl-4">
-        <li><%= link_to t('arc_design_link'), arc_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
-        <li><%= link_to t('graphic_design_link'), graphic_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
-        <li><%= link_to t('illustration_link'), illustration_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
-        <li><%= link_to t('product_design_link'), product_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700" %></li>
+      <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 md:pl-5"><%= t('projects_link').upcase %></div>
+      <ul class="list-none md:pl-5">
+        <li><%= link_to t('arc_design_link'), arc_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1" %></li>
+        <li><%= link_to t('graphic_design_link'), graphic_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1" %></li>
+        <li><%= link_to t('illustration_link'), illustration_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1" %></li>
+        <li><%= link_to t('product_design_link'), product_design_path, class: "flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1" %></li>
       </ul>
       <%#= link_to "Electric Bits".upcase, posts_path, class: "flex justify-center md:justify-start text-sidebar-nav text-l text-black mt-4 hover:text-gray-700 md:pl-4" %>
     </div>
   </div>
   <div class="col-span-1 md:mt-8">
     <div class="vertical-line-footer">
-      <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black md:mt-4 md:pl-4"><%= t('learn_more_link').upcase %></div>
-      <ul class="list-none md:pl-4">
+      <div class="flex justify-center md:justify-start text-sidebar-nav text-l text-black md:mt-4 md:pl-5"><%= t('learn_more_link').upcase %></div>
+      <ul class="list-none md:pl-5">
         <li class="text-paragraph-body tracking-wide text-xs font-light">
           <%= link_to "https://www.coretheorystudios.com", target: "_blank", rel: "noopener" do %>
-            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700">Core Theory
+            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1">Core Theory
               <%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
             </span>
           <% end %>
         </li>
         <li class="text-paragraph-body tracking-wide text-xs font-light">
           <%= link_to "https://www.thegridpdx.com", target: "_blank", rel: "noopener" do %>
-            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700">The Grid
+            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1">The Grid
               <%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
             </span>
           <% end %>
         </li>
         <li class="text-paragraph-body tracking-wide text-xs font-light">
           <%= link_to "https://www.linkedin.com/in/sarathayer", target: "_blank", rel: "noopener" do %>
-            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700">LinkedIn
+            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1">LinkedIn
               <%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
             </span>
           <% end %>
         </li>
         <li class="text-paragraph-body tracking-wide text-xs font-light">
           <%= link_to "https://www.behance.net/ssarasvati", target: "_blank", rel: "noopener" do %>
-            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-500 hover:text-gray-700">Behance
+            <span class="flex justify-center md:justify-start text-paragraph-body tracking-wide text-xs font-light text-gray-600 hover:text-gray-700 mt-1">Behance
               <%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
             </span>
           <% end %>

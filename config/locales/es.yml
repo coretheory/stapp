@@ -14,7 +14,7 @@ es:
   unauthorized_access: "Woops, parece que eso aún no existe."
   contacts:
     new:
-      contact_us: "Contactarnos"
+      contact_me: "Contactarnos"
       company: "Compañía"
       name: "Nombre"
       email: "Email"

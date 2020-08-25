@@ -1,32 +1,9 @@
 <div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
-  <div class="w-full pr-0 md:pr-6 mb-6">
-    <div class="bg-white">
-      <% if @projects.exists? %>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <% @projects.each do |project| %>
-            <% if project.body_images.attached? %>
-              <% project.body_images.each do |body_image| %>
-                <div>
-                  <%= link_to image_tag(body_image), project %>
-                </div>
-              <% end %>
-            <% elsif project.header_image.attached? %>
-              <div>
-                <%= link_to image_tag(project.header_image), project %>
-              </div>
-            <% end %>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="grid col-span-1 md:col-span-2 block justify-center p-10 text-center">
-          <% if user_signed_in? && current_user.admin? %>
-            <div class="flex justify-center mt-10 pt-10 lg:mt-2 pb-4">
-              <%= render_svg 'icons/pen' %>
-            </div>
-            <%= link_to 'Create a new project', new_project_path, class: "flex block justify-center btn btn-black btn-small" %>
-          <% end %>
-        </div>
-      <% end %>
+  <div class="w-full pr-0 md:pr-6 mb-6 mt-6 pt-6 md:mt-12 md:pt-12 lg:mt-8 lg:pt-8">
+    <div class="bg-white grid grid-cols-1 lg:grid-cols-4">
+      <div class="grid lg:col-span-2 text-paragraph-body font-light">
+        Hi, my name is Sara and I teach software and design. I love making things and helping people solve business problems through design.
+      </div>
     </div>
   </div>
 </div>
