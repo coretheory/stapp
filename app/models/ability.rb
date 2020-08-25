@@ -7,7 +7,7 @@ class Ability
     can [:new, :create], [Contact]
     can [:show, :index], [Gallery]
     can [:read], [Post]
-    can [:arc_design_index, :graphic_design_index, :illustration_index, :product_design_index], [Project]
+    can [:arc_design_index, :graphic_design_index, :illustration_index, :product_design_index, :read], [Project]
     return unless user.present?
     can :manage, Post, user_id: user.id
     return unless user.admin?
