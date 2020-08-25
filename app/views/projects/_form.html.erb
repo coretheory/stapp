@@ -21,6 +21,21 @@
         <% end %>
       </div>
       <%= form.file_field :header_image, direct_upload: true %>
+    </div>
+
+
+    <div class="pt-4 mb-3">
+      <p class="label">Title Image</p>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label 'This will display instead of your title/subtitle', class: "label font-normal" %>
+      <div class="mb-6">
+        <% if @project.title_image.attached? %>
+          <%= image_tag @project.title_image.representation(resize_to_fit: [200, 200]) %>
+        <% end %>
+      </div>
+      <%= form.file_field :title_image, direct_upload: true %>
     </div>   
 
     <div class="mb-6">
@@ -109,7 +124,7 @@
 
     <div class="pt-4 mb-3">
         <p class="label">Grid Layout</p>
-      </div>
+    </div>
     
     <div class="flex justify-between pb-4">
 
