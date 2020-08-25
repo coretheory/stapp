@@ -5,14 +5,18 @@
 
     <%= render 'project_by', project: @project %>
     
-    <p class="text-title text-center font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-6xl">
-    	<%= @project.title.upcase %>
-    </p>
-    <% if @project.subtitle.present? %>
-    <div class="flex justify-center">
-    	<%= render 'subtitle', project: @project %>
-    </div>
-		<% end %>
+    <% if !@project.title_image.attached? %>
+      <p class="text-title text-center font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-6xl">
+        <%= @project.title.upcase %>
+      </p>
+      <% if @project.subtitle.present? %>
+      <div class="flex justify-center">
+        <%= render 'subtitle', project: @project %>
+      </div>
+      <% end %>
+    <% else %>
+      <%= image_tag @project.title_image %>
+    <% end %>
 
     <%= render 'project_info', project: @project %>
 

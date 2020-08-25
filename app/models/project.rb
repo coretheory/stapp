@@ -10,6 +10,7 @@ class Project < ApplicationRecord
 	has_rich_text :project_team
 
 	has_one_attached :header_image
+	has_one_attached :title_image
 	has_one_attached :footer_image
 	has_many_attached :body_images
 
