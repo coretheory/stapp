@@ -1,0 +1,9 @@
+<%= content_for :primary_content do %>
+  <div class="lg:p-10 pt-12 pb-10 px-4 mt-12">
+    <h1 class="text-xl font-normal mb-6">Create new gallery (add a new image for display) <span class="italic"><%= @gallery.title %></span></h1>
+
+    <%= render 'form', gallery: @gallery %>
+  </div>
+<% end %>
+
+<%= render "new_gallery_layout" %>

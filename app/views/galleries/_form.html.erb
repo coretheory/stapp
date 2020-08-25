@@ -1,0 +1,49 @@
+<div class="grid grid-cols-1">
+  <%= form_with(model: gallery, local: true) do |form| %>
+    <% if gallery.errors.any? %>
+      <div id="error_explanation" class="border-red-400 p-4 rounded border bg-red-100 mb-6">
+        <h2 class="text-sm heading text-red-500"><%= pluralize(gallery.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+        <ul class="text-sm mt-2 text-red-500 pl-4 list-disc">
+        <% gallery.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+
+    <% end %> 
+
+    <div class="pt-4 mb-3">
+      <p class="label">Title</p>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label 'Link name for this image.', class: "label font-normal" %>
+      <%= form.text_field :title, class: "input" %>
+    </div>
+
+    <div class="pt-4 mb-3">
+      <p class="label">Description</p>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label 'Optional', class: "label font-normal" %>
+      <%= form.rich_text_area :description, class: "input" %>
+    </div>
+
+    <div class="mb-6">
+      <%= form.label :gallery_image, class: "label" %>
+      <div class="mb-6">
+        <% if @gallery.gallery_image.attached? %>
+          <%= image_tag @gallery.gallery_image.representation(resize_to_fit: [200, 200]) %>
+        <% end %>
+      </div>
+      <%= form.file_field :gallery_image, direct_upload: true %>
+    </div> 
+
+    <div class="mb-6">
+      <%= form.submit class: "btn btn-black" %>
+    </div>
+  <% end %>
+</div>
+

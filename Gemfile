@@ -30,7 +30,6 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 # Forms
 gem 'country_select', '~> 4.0'
-gem 'mail_form', '~> 1.8'
 
 # Jobs
 gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production

@@ -1,0 +1,23 @@
+<% content_for :primary_content do %>
+
+	<% if @gallery.gallery_image.attached? %>
+    <%= image_tag @gallery.gallery_image, class: "mb-8 pb-10" %>
+  <% end %>
+
+<% end %>
+
+<% content_for :title_content do %>
+
+	<% if @gallery.title.present? %>
+    <%= @gallery.title.upcase %>
+  <% end %>
+
+<% end %>
+
+<% content_for :description_content do %>
+
+  <%= @gallery.description unless @gallery.description.blank? %>
+
+<% end %>
+
+<%= render "show_gallery_layout" %>

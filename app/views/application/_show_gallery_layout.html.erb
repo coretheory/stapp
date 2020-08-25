@@ -1,0 +1,24 @@
+<div class="grid grid-cols-1 mb-12 pb-12">
+	<div class="flex flex-wrap px-2 lg:px-8 mt-2 lg:mt-8 container m-auto" style="justify-content: center; align-items: center;">
+
+	  <div class="w-full pr-0 md:pr-6 mb-6 mt-8 pt-10">
+	    <div class="bg-white">
+	      <%= yield :primary_content %>
+	      <%= render 'gallery_by', gallery: @gallery %>
+	    </div>
+	  </div>
+
+	  <div class="w-full pr-0 md:pr-6 mb-6">
+	    <div class="bg-white">
+	      <h1 class="text-title text-center font-bold text-2xl sm:text-4xl lg:text-5xl xl:text-6xl"><%= yield :title_content %></h1>
+	    </div>
+	  </div>
+
+	  <div class="w-full pr-0 md:pr-6 mb-12 pb-12 mt-4 pt-6">
+	    <div class="bg-white">
+	      <div class="text-paragraph-body font-light md:text-xl"><%= yield :description_content %></div>
+	    </div>
+	  </div>
+
+	</div>
+</div>

@@ -9,6 +9,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable, :lockable,
          :recoverable, :rememberable, :validatable, :pwned_password
 
+  has_many :galleries
   has_many :posts
   has_many :projects
 

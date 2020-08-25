@@ -1,7 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-	root to: "projects#front_page_gallery"
+  root to: "home#index"
+
+  resources :galleries, except: [:index]
+  get '/gallery', to: "galleries#index", as: "index_galleries"
 
 	get '/about', to: "home#about"
 
@@ -13,7 +16,6 @@ Rails.application.routes.draw do
 
 
   resources :projects
-  get '/gallery', to: "projects#gallery"
   get '/arc-design', to: "projects#arc_design_index"
   get '/graphic-design', to: "projects#graphic_design_index"
   get '/illustration', to: "projects#illustration_index"
