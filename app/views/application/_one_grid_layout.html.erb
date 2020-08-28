@@ -39,7 +39,7 @@
       </div>
     <% end %>
 
-		<div class="grid grid-cols-1">
+		<div class="grid grid-cols-1 gap-4">
       <% if @project.body_images.attached? %>
         <% @project.body_images.each do |body_image| %>
           <div><%= image_tag body_image %></div>
@@ -47,7 +47,7 @@
       <% end %>
 		</div>
 
-    <div class="grid grid-cols-1">
+    <div class="grid grid-cols-1 gap-4">
 			<%= yield :secondary_content %>
     </div>
   </div>
