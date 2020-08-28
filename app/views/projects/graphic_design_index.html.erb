@@ -4,11 +4,11 @@
   <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
     <div class="bg-white">
       <% if @projects.exists? %>
-        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-2">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-2">
           <% @projects.each do |project| %>
             <% if project.graphic_design == true && project.header_image.attached? %>
               <div>
-                <%= link_to image_tag(project.header_image), project %>
+                <%= link_to image_tag(project.header_image.variant(resize_to_fill: [600, 600])), project %>
                 <h1 class="text-title font-bold text-xl"><%= link_to project.title.upcase, project, class: "no-underline" %> <%= link_to project.subtitle.upcase, project, class: "no-underline font-light" if project.subtitle.present? %></h1>
                 <div class="text-paragraph-body font-light">
                   <%= project.project_type %>
