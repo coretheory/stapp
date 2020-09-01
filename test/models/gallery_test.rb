@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class GalleryTest < ActiveSupport::TestCase
+	
   test "gallery attributes, except description, must not be empty" do
   	gallery = Gallery.new
 
