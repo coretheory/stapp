@@ -9,7 +9,7 @@ jobs:
       db:
         image: postgres:12
         env:
-          POSTGRES_PASSWORD: <%= Rails.application.credentials.postgresql[:password] %>
+          POSTGRES_PASSWORD: admin
         ports: ['5432:5432']
         options: >-
           --health-cmd pg_isready
