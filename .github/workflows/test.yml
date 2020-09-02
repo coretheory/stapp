@@ -41,4 +41,4 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
           bundle exec rails db:prepare
-          bundle exec rails test:models
+          bundle exec rails test test/models/contact_test.rb test/models/gallery_test.rb
