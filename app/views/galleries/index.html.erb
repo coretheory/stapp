@@ -4,14 +4,16 @@
   <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
     <div class="bg-white">
 
-      <% if @galleries.exists? %>
+      <% if @galleries.present? %>
         <div class="gallery-row">
           <% @galleries.shuffle.each do |gallery| %>
-            <div class="gallery-column">
+          <div class="gallery-column">
+            <% gallery.shuffle.each do |image| %>
               <div class="shadow-lg rounded">
-                <%= link_to image_tag(gallery.gallery_image), gallery %>
+                <%= link_to image_tag(image.gallery_image), image %>
               </div>
-            </div>
+            <% end %>
+          </div>
           <% end %>
         </div>
       <% end %>
