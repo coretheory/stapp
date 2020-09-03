@@ -1,33 +1,10 @@
 .gallery-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  /* Your gallery-container needs a fixed height, and it 
-   * needs to be taller than your tallest column. */
-  height: 4000px;
+  column-count: 3;
+  column-gap: 0.5em;
 }
 
 .gallery-item {
-  width: 32%;
-  margin: 6px 6px;
   display: inline-block;
-  vertical-align: top;
-}
-
-.gallery-item::before {
-  counter-increment: gallery-items;
-}
-
-/* Re-order gallery-items into 3 rows */
-.gallery-item:nth-child(3n+1) { order: 1; }
-.gallery-item:nth-child(3n+2) { order: 2; }
-.gallery-item:nth-child(3n)   { order: 3; }
-
-/* Force new columns */
-.gallery-container::before,
-.gallery-container::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
+  margin: 0 0 0.5em;
+  width: 100%;
 }
