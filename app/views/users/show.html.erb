@@ -2,7 +2,8 @@
 
 <div class="bg-white text-black pt-6 md:mt-12 md:pt-12">
 	  <div class="container pt-10 pb-10">
-	    <h1 class="lg:text-3xl text-lg"><%= @user.username.capitalize %>'s Profile</h1>
+	    <h1 class="lg:text-3xl text-lg mb-4"><%= @user.username.capitalize %>'s Profile</h1>
+      <%= link_to "View contacts", contacts_path, class: "btn btn-purple btn-small" %>
 	  </div>
 </div>
 
@@ -66,7 +67,6 @@
       <%= link_to "New post", new_post_path, class: "btn btn-outline btn-small w-full block my-2" %>
       <%= link_to "New gallery", new_gallery_path, class: "btn btn-outline btn-small w-full block my-2" %>
       <%= link_to 'Add project', new_project_path, class: "btn btn-black btn-small w-full block my-2" %>
-      <%= link_to "Contacts", contacts_path, class: "btn btn-purple btn-small w-full block my-2" %>
     <% else %>
       <%= link_to "Login", new_user_session_path, class: "btn btn-white btn-small w-full block my-2" %>
       <%= link_to "Sign Up", new_user_session_path, class: "btn btn-purple btn-small w-full block my-2" %>

@@ -9,7 +9,9 @@
 
 .gallery-item {
   width: 32%;
-  margin: 6px auto;
+  margin: 6px 6px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .gallery-item::before {
