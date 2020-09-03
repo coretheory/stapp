@@ -10,7 +10,7 @@
           <div class="gallery-column">
             <% gallery.shuffle.each do |image| %>
               <div class="shadow-lg rounded">
-                <%= link_to image_tag(image.gallery_image), image %>
+                <%= link_to image_tag(image.gallery_image), image, style: "width: 100%;" %>
               </div>
             <% end %>
           </div>
