@@ -3,25 +3,212 @@
 <div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
   <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
     <div class="bg-white">
-      <% if @galleries.exists? %>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <% @galleries.shuffle.each do |gallery| %>
-            <div class="shadow-lg rounded">
-              <%= link_to image_tag(gallery.gallery_image.variant(resize_to_fit: [600, 900])), gallery %>
+
+      <% @galleries.shuffle if @galleries.exists? %>
+        <div class="gallery-row">
+
+          <% if @galleries[0...3] %>
+            <div class="gallery-column">
+              <% @galleries[0...3].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
             </div>
           <% end %>
+
+          <% if @galleries[3...6] %>
+            <div class="gallery-column">
+              <% @galleries[3...6].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[6...9] %>
+            <div class="gallery-column">
+              <% @galleries[6...9].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[9...12] %>
+            <div class="gallery-column">
+              <% @galleries[9...12].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[12...15] %>
+            <div class="gallery-column">
+              <% @galleries[12...15].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[15...18] %>
+            <div class="gallery-column">
+              <% @galleries[15...18].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[18...21] %>
+            <div class="gallery-column">
+              <% @galleries[18...21].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[21...24] %>
+            <div class="gallery-column">
+              <% @galleries[21...24].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[24...27] %>
+            <div class="gallery-column">
+              <% @galleries[24...27].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[27...30] %>
+            <div class="gallery-column">
+              <% @galleries[27...30].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[30...33] %>
+            <div class="gallery-column">
+              <% @galleries[30...33].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[33...36] %>
+            <div class="gallery-column">
+              <% @galleries[33...36].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[36...39] %>
+            <div class="gallery-column">
+              <% @galleries[36...39].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[39...42] %>
+            <div class="gallery-column">
+              <% @galleries[39...42].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[42...45] %>
+            <div class="gallery-column">
+              <% @galleries[42...45].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[45...48] %>
+            <div class="gallery-column">
+              <% @galleries[45...48].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[48...51] %>
+            <div class="gallery-column">
+              <% @galleries[48...51].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[51...54] %>
+            <div class="gallery-column">
+              <% @galleries[51...54].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[54...57] %>
+            <div class="gallery-column">
+              <% @galleries[54...57].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
+          <% if @galleries[57...60] %>
+            <div class="gallery-column">
+              <% @galleries[57...60].each do |gallery| %>
+                <div class="shadow-lg rounded">
+                  <%= link_to image_tag(gallery.gallery_image), gallery %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+
         </div>
-      <% else %>
-        <div class="grid col-span-1 md:col-span-2 block justify-center p-10 text-center">
-          <div class="flex justify-center mt-10 pt-10 lg:mt-2 pb-4">
-            <%= render_svg 'icons/pen' %>
-          </div>
-          <p class="mb-4">Coming soon... </p>
-          <% if user_signed_in? && current_user.admin? %>
-              <%= link_to 'Create a new gallery', new_gallery_path, class: "flex block justify-center btn btn-black btn-small" %>
-            <% end %>
-        </div>
-      <% end %>
+
     </div>
   </div>
 </div>

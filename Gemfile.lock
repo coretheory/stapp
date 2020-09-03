@@ -284,6 +284,7 @@ DEPENDENCIES
   inline_svg (~> 1.7, >= 1.7.1)
   jbuilder (~> 2.7)
   meta-tags (~> 2.13)
+  mini_magick (~> 4.10, >= 4.10.1)
   name_of_person (~> 1.1, >= 1.1.1)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)

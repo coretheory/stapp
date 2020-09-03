@@ -20,10 +20,10 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
-gem 'jbuilder', '~> 2.7' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+gem 'jbuilder', '~> 2.7'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 4.0' # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 4.0'
 
 # Database
 gem 'pg', '>= 0.18', '< 2.0'
@@ -32,14 +32,14 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'country_select', '~> 4.0'
 
 # Jobs
-gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 4.0'
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 
 # Other
 gem 'friendly_id', '~> 5.3'
 gem 'meta-tags', '~> 2.13'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
-gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
 
 # Server
 gem 'puma', '~> 4.1'
