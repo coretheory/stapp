@@ -6,9 +6,7 @@ class GalleriesController < ApplicationController
   # GET /galleries
   # GET /galleries.json
   def index
-    return @galleries = Gallery.all.in_groups_of(2) if Gallery.all.count <= 8
-    return @galleries = Gallery.all.in_groups_of(10) if Gallery.all.count == 30 || Gallery.all.count == 60
-    @galleries = Gallery.all.in_groups_of(3) if Gallery.all.count > 8
+    @galleries = Gallery.all
   end
 
   # GET /galleries/1
