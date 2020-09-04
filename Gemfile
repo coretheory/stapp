@@ -25,6 +25,9 @@ gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 
+# Cache
+gem 'dalli', '~> 2.7', '>= 2.7.10'
+
 # Database
 gem 'pg', '>= 0.18', '< 2.0'
 
