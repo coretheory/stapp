@@ -1,29 +1,19 @@
-<% content_for :primary_content do %>
-  <% if @posts.exists? %>
-    <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-      <div class="shadow rounded">
-      <%= render @posts %>
-      </div>
+<% provide(:title, "Posts") %>
+
+<div class="py-2 px-2 lg:px-2 lg:mt-8 md:pt-12 md:pt-6 container">
+  <div class="w-full pr-0 md:pr-6 mb-6 mt-10 pt-10">
+    <div class="bg-white">
+
+      <% if @posts.present? %>
+        <div class="post-container">
+          <% @posts.each do |post| %>
+            <div class="post-item shadow-lg rounded">
+              <%= render 'posts/post', post: post %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
     </div>
-  <% else %>
-    <div class="block justify-center p-10 text-center">
-      <div class="flex justify-center pb-4">
-        <%= render_svg 'icons/pen' %>
-      </div>
-      <p class="mb-4">Coming soon... </p>
-      <% if user_signed_in? && current_user.admin? %>
-          <%= link_to 'Create a new post', new_post_path, class: "flex block justify-center btn btn-pink-300 btn-small" %>
-        <% end %>
-    </div>
-  <% end %>
-<% end %>
-
-
-
-<% content_for :secondary_content do %>
-  <%= link_to 'New post', new_post_path, class: "btn btn-pink-300 btn-small" %>
-<% end %>
-
-
-
-<%= render "index_layout" %>
+  </div>
+</div>

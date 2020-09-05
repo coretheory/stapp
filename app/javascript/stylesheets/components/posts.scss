@@ -1,3 +1,14 @@
 .list {
   list-style: decimal inside;
 }
+
+.post-container {
+  column-count: 3;
+  column-gap: 0.5em;
+}
+
+.post-item {
+  display: inline-block;
+  margin: 0 0 0.5em;
+  width: 100%;
+}

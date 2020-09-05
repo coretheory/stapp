@@ -1,6 +1,6 @@
 <% content_for :primary_content do %>
 
-	<%= image_tag @post.header_image %>
+	<%= image_tag @post.header_image if @post.header_image.attached? %>
 
 	<div class="pl-6 p-4 pb-10 pr-6">
     <div class="flex flex-row flex-wrap items-start justify-between">
