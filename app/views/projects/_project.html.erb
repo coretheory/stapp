@@ -12,7 +12,7 @@
         <div class="pl-4 py-4">
           <div class="flex-1">
             <h1 class="text-title font-bold text-xl"><%= link_to project.title.upcase, project, class: "no-underline" %> <%= link_to project.subtitle.upcase, project, class: "no-underline font-light" if project.subtitle.present? %></h1>
-            <h2 class="text-title font-bold text-gray-500"><%= project.created_at.to_time.strftime('%B %e, %Y') %></h2>
+            <h2 class="text-title font-light text-gray-500"><%= project.created_at.to_time.strftime('%B %e, %Y') %></h2>
           </div>
           <div class="text-paragraph-body font-light">
             <%= project.project_type %>

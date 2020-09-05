@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @project = projects(:one)
+    @project = projects(:sara_project)
   end
 
   test "should get index" do
@@ -35,7 +35,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update project" do
     patch project_url(@project), params: { project: {  } }
-    assert_redirected_to project_url(@project)
+    assert_redirected_to project_path(@project)
   end
 
   test "should destroy project" do
