@@ -6,7 +6,7 @@ class Audience < ApplicationRecord
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
 	attribute :nickname, :captcha  => true
-	
+
 	has_many :notifications, as: :recipient
 
 	validates :email, presence: true, length: { maximum: 250 }, format: { with: VALID_EMAIL_REGEX }
@@ -30,10 +30,6 @@ class Audience < ApplicationRecord
 	def activate
 		update_attribute(:activated, true)
 		update_attribute(:activated_at, Time.zone.now)
-	end
-
-	def send_activation_email
-		AudienceMailer.audience_activation(self).deliver_later
 	end
 
 	def send_activation_success_email
