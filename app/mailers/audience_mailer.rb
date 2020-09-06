@@ -16,4 +16,10 @@ class AudienceMailer < ApplicationMailer
 
     mail to: audience.email, subject: "Newsletter activated! | SARATHAYER.com"
   end
+
+  def new_post
+    @audience = params[:audience]
+
+    mail(to: @audience.email, subject: "New post by Sara | SARATHAYER.COM")
+  end
 end
