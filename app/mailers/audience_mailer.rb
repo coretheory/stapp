@@ -5,16 +5,16 @@ class AudienceMailer < ApplicationMailer
   #
   #   en.audience_mailer.audience_activation.subject
   #
-  def audience_activation
-    @audience = params[:audience]
+  def audience_activation(audience)
+    audience = audience
 
-    mail(to: @audience.email, subject: "Newsletter activation | SARATHAYER.com")
+    mail to: "#{audience.email}", subject: "Newsletter activation | SARATHAYER.com"
   end
 
   def audience_activation_success(audience)
-    @audience = audience
+    audience = audience
 
-    mail(to: @audience.email, subject: "Newsletter activated! | SARATHAYER.com")
+    mail to: "#{audience.email}", subject: "Newsletter activated! | SARATHAYER.com"
   end
 
   def new_post
