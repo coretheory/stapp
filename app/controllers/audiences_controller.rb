@@ -23,7 +23,7 @@ class AudiencesController < ApplicationController
 	def destroy
     @audience.destroy
     respond_to do |format|
-      format.html { redirect_to index_audience_path, notice: 'Email was successfully destroyed.' }
+      format.html { redirect_to audiences_path, notice: 'Audience member successfully destroyed.' }
       format.json { head :no_content }
     end
   end
