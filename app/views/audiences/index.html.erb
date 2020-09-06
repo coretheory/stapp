@@ -1,0 +1,46 @@
+<% provide(:title, "Audience") %>
+
+<% content_for :primary_content do %>
+  <div id="audience_cards" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <% @audience.each do |c| %>
+	    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+	    	<% if user_signed_in? && current_user.admin?  %>
+			    <span class="absolute mt-4 ml-4 flex justify-end">
+			      <%= link_to c, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
+			        <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
+			      <% end %>
+			    </span>
+			  <% end %>
+			  <%= image_tag("photos/sunset_in_the_mountains.png", alt: "Sunset in the mountains") %>
+			  <div class="px-6 py-4">
+			  	<% if c.activated? %>
+				  	<div class="flex justify-between">
+				    	<div class="font-bold text-title text-xl mb-2 pl-2 pr-1 bg-green-300 rounded"><%= c.activated? %></div> 
+				    	<div class="text-paragrpah-body text-md font-light space-x-0"> active </div>
+				  	</div>
+				    <p class="text-paragraph-body text-grey-darker text-base">
+				      This email is active.
+				    </p>
+			    <% else %>
+			    	<div class="flex justify-between">
+				    	<div class="font-bold text-title text-xl mb-2 pl-2 pr-1 bg-red-300 rounded"><%= c.activated? %></div> 
+				    	<div class="text-paragrpah-body text-md font-light space-x-0"> inactive </div>
+				  	</div>
+				    <p class="text-paragraph-body text-grey-darker text-base">
+				      This email has not been activated.
+				    </p>
+			    <% end %>
+			  </div>
+			  <div class="flex justify-center px-6 py-4">
+			    <%= link_to c.email, "mailto:#{c.email}", class: "bg-purple-300 rounded-full shadow px-4 py-2 font-light text-white text-paragraph-body" %>
+			  </div>
+			</div>
+    <% end %>
+  </div>
+ <% end %>
+
+<% content_for :secondary_content do %>
+  
+<% end %>
+
+<%= render 'index_layout' %>

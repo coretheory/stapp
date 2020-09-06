@@ -3,7 +3,10 @@
 <div class="bg-white text-black pt-6 md:mt-12 md:pt-12">
 	  <div class="container pt-10 pb-10">
 	    <h1 class="lg:text-3xl text-lg mb-4"><%= @user.username.capitalize %>'s Profile</h1>
-      <%= link_to "View contacts", contacts_path, class: "btn btn-purple btn-small" %>
+      <div class="flex">
+        <%= link_to "View contacts", contacts_path, class: "btn btn-purple btn-small mr-2" %>
+        <%= link_to "View audience", audiences_path, class: "btn btn-purple btn-small ml-2" %>
+      </div>
 	  </div>
 </div>
 

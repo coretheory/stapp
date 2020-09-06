@@ -4,6 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can [:create], [Audience]
     can [:new, :create], [Contact]
     can [:show, :index], [Gallery]
     can [:read], [Post]

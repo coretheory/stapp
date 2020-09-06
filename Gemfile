@@ -42,17 +42,15 @@ gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'friendly_id', '~> 5.3'
 gem 'meta-tags', '~> 2.13'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'noticed', '~> 1.2', '>= 1.2.15'
 gem 'turbolinks', '~> 5'
 
 # Server
 gem 'puma', '~> 4.1'
 
 # Security
+gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'devise-pwned_password', '~> 0.1.8'
-
-# Unused
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
