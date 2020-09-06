@@ -35,6 +35,6 @@ class AudiencesController < ApplicationController
     end
 
 		def audience_params
-			params.require(:audience).permit(:email)
+			params.require(:audience).permit(:email, :nickname)
 		end
 end
