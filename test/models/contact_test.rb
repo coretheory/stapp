@@ -15,7 +15,7 @@ class ContactTest < ActiveSupport::TestCase
   test "company length must not be greater than 50" do
   	contact = Contact.new(first_name: "Mark",
 										  		last_name:  "Thayer",
-										  		email: 			"mark@coretheorystudios.com",
+										  		email: 			"random@anotherrandomemail.com",
 										  		message: 		"This is my message testing the company length.")
   	contact.company = "Core Theory and enough other characters to go over "
   	assert contact.invalid?
@@ -30,7 +30,7 @@ class ContactTest < ActiveSupport::TestCase
   test "message length must be greater than or equal to 20" do
   	contact = Contact.new(first_name: "Mark",
 										  		last_name:  "Thayer",
-										  		email: 			"mark@coretheorystudios.com",
+										  		email: 			"super@anothersuperrandomemail.com",
 										  		company:    "Core Theory, Inc.")
   	contact.message = "Hi there"
   	assert contact.invalid?
