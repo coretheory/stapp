@@ -86,5 +86,6 @@ production:
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: stapp_production
+  url: <%= ENV['DATABASE_URL'] %>
   username: <%= Rails.application.credentials.postgresql[:username] %>
   password: <%= Rails.application.credentials.postgresql[:password] %>
