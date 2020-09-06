@@ -21,7 +21,8 @@ class AudiencesController < ApplicationController
 
 		respond_to do |format|
 			if @audience.save
-				AudienceMailer.with(audience: @audience).new_audience.deliver_later
+				email = AudienceMailer.with(audience: @audience)
+				email.new_audience.deliver_later
 				format.html { redirect_to root_path, notice: "Please check your email to activate your newsletter." }	
 			else
 				format.html { redirect_to root_path, alert: "Woops, that email couldn't be signed up." }

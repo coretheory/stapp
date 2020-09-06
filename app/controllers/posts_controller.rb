@@ -30,7 +30,8 @@ class PostsController < ApplicationController
     
     respond_to do |format|
       if @post.save
-        NewPostNotification.with(post: @post).deliver_later(Audience.all)
+        notification = NewPostNotification.with(post: @post)
+        notification.deliver_later(Audience.all)
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
