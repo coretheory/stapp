@@ -23,7 +23,7 @@ class AudiencesController < ApplicationController
 			if @audience.save
 				email = AudienceMailer.with(audience: @audience)
 				email.new_audience.deliver_later
-				format.html { redirect_to root_path, notice: "Please check your email to activate your newsletter." }	
+				format.html { redirect_to root_path, notice: "Woohoo! You have signed up successfully." }	
 			else
 				format.html { redirect_to root_path, alert: "Woops, that email couldn't be signed up." }
 				format.json { render json: @audience.errors, status: :unprocessable_entity }
