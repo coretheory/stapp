@@ -7,7 +7,7 @@ class NewPostNotification < Noticed::Base
   # Add your delivery methods
   #
   # deliver_by :database
-  deliver_by :email, mailer: "AudienceMailer", if: :email_activated?
+  deliver_by :email, mailer: "AudienceMailer"
   # deliver_by :slack
   # deliver_by :custom, class: "MyDeliveryMethod"
 
@@ -22,9 +22,5 @@ class NewPostNotification < Noticed::Base
 
   def url
     post_path(params[:post])
-  end
-
-  def email_activated?
-    recipient.activated?
   end
 end

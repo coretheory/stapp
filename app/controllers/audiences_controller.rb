@@ -6,12 +6,22 @@ class AudiencesController < ApplicationController
 		@audience = Audience.all
 	end
 
+	def show
+  end
+
+  def new 
+    @audience = audience.new
+  end
+
+  def edit
+  end
+
 	def create
 		@audience = Audience.new(audience_params)
 
 		respond_to do |format|
 			if @audience.save
-				@audience.send_activation_email
+				AudienceMailer.with(audience: @audience).new_audience.deliver_later
 				format.html { redirect_to root_path, notice: "Please check your email to activate your newsletter." }	
 			else
 				format.html { redirect_to root_path, alert: "Woops, that email couldn't be signed up." }
@@ -19,6 +29,18 @@ class AudiencesController < ApplicationController
 			end
 		end
 	end
+
+	def update
+    respond_to do |format|
+      if @audience.update(audience_params)
+        format.html { redirect_to @audience, notice: 'Audience member successfully updated.' }
+        format.json { render :show, status: :ok, location: @audience }
+      else
+        format.html { render :edit }
+        format.json { render json: @audience.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
 	def destroy
     @audience.destroy
