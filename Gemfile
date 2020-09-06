@@ -23,7 +23,7 @@ gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'jbuilder', '~> 2.7'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.2', '>= 5.2.1'
 
 # Cache
 gem 'dalli', '~> 2.7', '>= 2.7.10'
