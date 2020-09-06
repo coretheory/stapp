@@ -7,5 +7,7 @@
 # You can override concurrency based on environment.
 production:
   :concurrency: 15
+  :queues:
+  - default
 staging:
   :concurrency: 15
