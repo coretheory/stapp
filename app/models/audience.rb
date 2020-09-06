@@ -8,7 +8,7 @@ class Audience < ApplicationRecord
 	validates :email, presence: true, length: { maximum: 250 }, format: { with: VALID_EMAIL_REGEX }
 	validates :email, uniqueness: true
 
-	has_many :notifications, as: :recipient
+	#has_many :notifications, as: :recipient
 
 	def Audience.digest(string)
 		cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
