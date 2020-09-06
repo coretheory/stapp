@@ -8,13 +8,13 @@ class AudienceMailer < ApplicationMailer
   def audience_activation(audience)
     @audience = audience
 
-    mail to: audience.email, subject: "Newsletter activation | SARATHAYER.com"
+    mail(to: @audience.email, subject: "Newsletter activation | SARATHAYER.com")
   end
 
   def audience_activation_success(audience)
     @audience = audience
 
-    mail to: audience.email, subject: "Newsletter activated! | SARATHAYER.com"
+    mail(to: @audience.email, subject: "Newsletter activated! | SARATHAYER.com")
   end
 
   def new_post
