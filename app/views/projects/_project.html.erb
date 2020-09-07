@@ -20,7 +20,7 @@
           <div class="text-paragraph-body font-light">
             <%= project.year %>
           </div>
-
+      <% end %>
           <% if user_signed_in? && current_user.id == project.user_id  %>
             <div class="pt-2 flex flex-wrap items-center">
               <%= link_to edit_project_path(project), class: "no-underline mr-2" do %>
@@ -33,7 +33,6 @@
             </div>
           <% end %>
         </div>
-      <% end %>
     </div>
   </div>
 
