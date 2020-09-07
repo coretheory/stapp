@@ -13,7 +13,7 @@ class AudienceMailer < ApplicationMailer
 
   def new_post_notification
     @post = params[:post]
-    post_path = recipient.url
+    @post_path = params[:recipient]
 
     mail(to: params[:recipient], subject: "New post by Sara @ sarathayer.com")
   end
