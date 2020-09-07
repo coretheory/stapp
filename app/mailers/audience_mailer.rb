@@ -14,6 +14,6 @@ class AudienceMailer < ApplicationMailer
   def new_post_notification
     @post = params[:post]
 
-    mail(to: @post.recipient, subject: "New post by Sara @ sarathayer.com")
+    mail(to: params[:recipient], subject: "New post by Sara @ sarathayer.com")
   end
 end
