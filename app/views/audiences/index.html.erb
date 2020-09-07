@@ -17,8 +17,8 @@
 			    	<div class="font-bold text-title text-xl mb-2 pl-2 pr-1 bg-green-300 rounded"><%= c.id %></div> 
 			    	<div class="text-paragrpah-body text-md font-light space-x-0"> active </div>
 			  	</div>
-			    <p class="text-paragraph-body text-grey-darker text-base">
-			      This email is active.
+			    <p class="text-sidebar-nav font-light text-gray-500">
+			      <%= post.created_at.to_time.strftime('%H on %B %e, %Y') %>
 			    </p>
 			  </div>
 			  <div class="flex justify-center px-6 py-4">

@@ -12,6 +12,7 @@ class AudienceMailer < ApplicationMailer
   end
 
   def new_post_notification
+
     mail(to: recipient.email, subject: "New post by Sara @ sarathayer.com")
   end
 end
