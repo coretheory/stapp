@@ -5,18 +5,18 @@
 .post-container {
   column-count: 3;
   column-gap: 0.5em;
+}
 
-  @media only screen and (max-width: 1023px) and (min-width: 768px) {
-	  .masonry {
-	    column-count: 2;
-	  }
-	}
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .post-container {
+    column-count: 2;
+  }
+}
 
-  @media only screen and (max-width: 767px) and (min-width: 540px) {
-	  .post-container {
-	    column-count: 1;
-	  }
-	}
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+  .post-container {
+    column-count: 1;
+  }
 }
 
 .post-item {
