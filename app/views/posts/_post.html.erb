@@ -16,7 +16,7 @@
           </div>
         </div>
       <% end %>
-          <% if user_signed_in? && (current_user.id == post.user_id && current_user.admin?)  %>
+          <% if user_signed_in? && (current_user.id == post.user_id || current_user.admin?)  %>
             <div class="pt-2 flex flex-wrap items-center">
               <%= link_to edit_post_path(post), class: "no-underline mr-2" do %>
                 <%= render_svg 'icons/pencil-square', title: "Edit", styles: "fill-current text-gray-500 icon-sm" %>
