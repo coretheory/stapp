@@ -27,11 +27,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = current_user.posts.build(post_params)
-    @audience = Audience.all
     
     respond_to do |format|
       if @post.save
-        notification = NewPostNotification.with(post: @post, audience: @audience)
+        notification = NewPostNotification.with(post: @post)
         notification.deliver_later(Audience.all)
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }

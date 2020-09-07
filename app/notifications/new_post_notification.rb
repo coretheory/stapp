@@ -12,7 +12,7 @@ class NewPostNotification < Noticed::Base
   # deliver_by :custom, class: "MyDeliveryMethod"
 
   # Add required params
-  params [:audience, :post]
+  param :post
 
   # Define helper methods to make rendering easier.
   #
