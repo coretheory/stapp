@@ -1,13 +1,9 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-  get 'email_updates/new'
-  get 'email_updates/edit'
   root to: "home#index"
 
   resources :audiences
-  resources :audience_activations, only: [:edit]
-  resources :email_updates, only: [:edit, :update]
 
   resources :galleries, except: [:index]
   get '/gallery', to: "galleries#index", as: "index_galleries"
