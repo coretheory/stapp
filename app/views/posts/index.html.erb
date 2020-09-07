@@ -6,15 +6,15 @@
 
       <% if @posts.present? %>
         <div class="post-container">
-          <% cache @posts do %>
-            <% @posts.each do |post| %>
-              <% cache post do %>
-                <div class="post-item shadow-lg rounded">
-                  <%= render 'posts/post', post: post %>
-                </div>
-              <% end %>
-            <% end %>
+          
+          <% @posts.each do |post| %>
+            
+              <div class="post-item shadow-lg rounded">
+                <%= render 'posts/post', post: post %>
+              </div>
+            
           <% end %>
+          
         </div>
       <% end %>
 
