@@ -12,7 +12,7 @@
         <div class="pl-4 py-4">
           <div class="flex-1">
             <h1 class="text-title font-bold text-xl"><%= link_to post.title.upcase, post, class: "no-underline" %> <%= link_to post.url, post, class: "no-underline font-light" if post.url.present? %></h1>
-            <h2 class="text-title font-light text-gray-500"><%= post.created_at.to_time.strftime('%B %e, %Y') %></h2>
+            <h2 class="text-sidebar-nav font-light text-gray-500"><%= post.created_at.to_time.strftime('%B %e, %Y') %></h2>
           </div>
 
           <% if user_signed_in? && current_user.id == post.user_id  %>

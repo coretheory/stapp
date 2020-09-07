@@ -5,54 +5,54 @@
 }
 
 .btn-small {
-  @apply font-bold py-2 px-4 rounded text-sm;
+  @apply font-medium py-2 px-4 rounded text-sm text-paragraph-body;
 }
 
 .btn-purple {
-  @apply bg-purple-600 text-white;
+  @apply bg-purple-600 text-white text-paragraph-body;
 }
 
 .btn-purple:hover {
-  @apply bg-purple-700;
+  @apply bg-purple-700 font-medium;
 }
 
 .btn-green {
-  @apply bg-green-500 text-white;
+  @apply bg-green-500 text-white text-paragraph-body;
 }
 
 .btn-green:hover {
-  @apply bg-green-600;
+  @apply bg-green-600 font-medium;
 }
 
 .btn-black {
-  @apply bg-black text-white;
+  @apply bg-black text-white text-paragraph-body;
 }
 
 .btn-black:hover {
-  @apply bg-gray-700 shadow-lg;
+  @apply bg-gray-700 shadow-lg font-medium;
 }
 
 .btn-purple:active,
 .btn-green:active,
 .btn-black:active {
-  @apply text-white;
+  @apply text-white font-medium;
 }
 
 
 .btn-outline {
-  @apply text-gray-800 border border-gray-400;
+  @apply text-gray-800 border border-gray-400 text-paragraph-body;
 }
 
 .btn-outline:hover {
-  @apply bg-pink-400 shadow-lg text-white border-pink-400;
+  @apply bg-pink-400 shadow-lg text-white border-pink-400 font-medium;
 }
 
 .btn-white {
-  @apply bg-white text-gray-800 py-2 px-4 border border-gray-400 rounded shadow;
+  @apply bg-white text-gray-800 py-2 px-4 border border-gray-400 rounded shadow text-paragraph-body;
 }
 
 .btn-white:hover {
-  @apply bg-gray-100;
+  @apply bg-gray-100 font-medium;
 }
 
 .link {

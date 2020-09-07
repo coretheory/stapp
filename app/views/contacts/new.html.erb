@@ -4,9 +4,9 @@
 	<%= image_tag "photos/Final_Section_SCIARC.png", alt: "Thesis Large Chunk" %>
 	</div>
 
-	<div class="pl-6 md:col-span-2">
+	<div class="pl-6 pr-10 md:col-span-2">
 		<div class="text-title">
-			<h1 class=text-3xl><%= t('.contact_me').upcase %></h1>
+			<h1><%= t('.contact_me').upcase %></h1>
 		</div>
     <div>
 	    <%= form_with(url: new_contact_path, model: @contact, local: true) do |form| %>
@@ -52,7 +52,7 @@
 				</div>
 
 		    <div class="mb-6">
-			    <%= form.submit t('.send_message'), class: "btn btn-black" %>
+			    <%= form.submit t('.send_message'), class: "btn btn-black btn-small" %>
 			  </div>
 		  <% end %>
 
@@ -65,8 +65,8 @@
 			<div class="text-title pt-0 mt-0 pl-4 mb-4 pb-4"> 
 				<h3 class="text-xl"><%= t('contact_link').upcase %></h3>
 				<ul class="list-none">
-					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
-					<li class="text-paragraph-body tracking-wide text-xs font-light"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
+					<li class="text-paragraph-body tracking-wide text-xs font-light mt-2"><%= link_to "hello@sarathayer.com", "mailto:hello@sarathayer.com", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
+					<li class="text-paragraph-body tracking-wide text-xs font-light mt-1"><%= link_to "+1 (503) 446-5077", "tel:+15034465077", class: "no-underline text-gray-500 hover:text-gray-700" %></li>
 				</ul>
 			</div>
 
@@ -75,28 +75,28 @@
 				<ul class="list-none">
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.coretheorystudios.com", target: "_blank" do %>
-							<span class="flex no-underline text-gray-500 hover:text-gray-700">Core Theory
+							<span class="flex no-underline text-gray-500 hover:text-gray-700 mt-2">Core Theory
 								<%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
 							</span>
 						<% end %>
 					</li>
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.thegridpdx.com", target: "_blank" do %>
-							<span class="flex no-underline text-gray-500 hover:text-gray-700">The Grid
+							<span class="flex no-underline text-gray-500 hover:text-gray-700 mt-1">The Grid
 								<%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
 							</span>
 						<% end %>
 					</li>
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.linkedin.com/in/sarathayer", target: "_blank" do %>
-							<span class="flex no-underline text-gray-500 hover:text-gray-700">LinkedIn
+							<span class="flex no-underline text-gray-500 hover:text-gray-700 mt-1">LinkedIn
 								<%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
 							</span>
 						<% end %>
 					</li>
 					<li class="text-paragraph-body tracking-wide text-xs font-light">
 						<%= link_to "https://www.behance.net/ssarasvati", target: "_blank" do %>
-							<span class="flex no-underline text-gray-500 hover:text-gray-700">Behance
+							<span class="flex no-underline text-gray-500 hover:text-gray-700 mt-1">Behance
 								<%= render_svg 'icons/arrow-right-short', title: "Go to Core Theory website", styles: "fill-current pt-1 icon-sm" %>
 							</span>
 						<% end %>

@@ -1,18 +1,30 @@
 .text-paragraph-body {
 	font-family: acumin-pro, sans-serif;
+	font-weight: 200;
 }
 
 .text-sidebar-nav {
 	font-family: din-condensed, sans-serif;
-	letter-spacing: 0.25em;
+	letter-spacing: 0.2em;
+	font-weight: 300;
 }
 
 .text-title {
 	font-family: din-condensed, sans-serif;
-	letter-spacing: 0.25em;
+	letter-spacing: 0.2em;
+	font-weight: 400;
+	font-size: 3em;
+}
+
+.text-site-title {
+	font-family: din-condensed, sans-serif;
+	letter-spacing: 0.2em;
+	font-weight: 400;
+	font-size: 1.875em;
 }
 
 .text-subtitle {
-	font-family: din-2014,sans-serif;
-	letter-spacing: 0.15em;
+	font-family: din-condensed,sans-serif;
+	letter-spacing: 0.2em;
+	font-weight: 300;
 }

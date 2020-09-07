@@ -17,7 +17,7 @@
 
       <div class="grid col-span-1" id="profile_posts">
         <div class="shadow-lg rounded">
-          <div class="text-title text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
+          <div class="text-sidebar-nav text-2xl text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
           <% @user.posts.order(:created_at).reverse.each do |post| %>
             <%= render 'posts/post', post: post %>
           <% end %>
@@ -26,7 +26,7 @@
 
       <div class="grid col-span-1" id="profile_projects">
         <div class="shadow-lg rounded">
-          <div class="text-title text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
+          <div class="text-sidebar-nav text-2xl text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
           <% @user.projects.order(:created_at).reverse.each do |project| %>
             <%= render 'projects/project', project: project %>
           <% end %>
@@ -37,7 +37,7 @@
 
       <div class="grid md:col-span-2" id="profile_posts">
         <div class="shadow-lg rounded">
-          <div class="text-title text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
+          <div class="text-sidebar-nav text-2xl text-center py-6 text-white bg-pink-400"><%= "Posts".upcase %></div>
           <% @user.posts.order(:created_at).reverse.each do |post| %>
             <%= render 'posts/post', post: post %>
           <% end %>
@@ -48,7 +48,7 @@
 
       <div class="grid md:col-span-2" id="profile_projects">
         <div class="shadow-lg rounded">
-          <div class="text-title text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
+          <div class="text-sidebar-nav text-2xl text-center py-6 text-white bg-black"><%= "Projects".upcase %></div>
           <% @user.projects.order(:created_at).reverse.each do |project| %>
             <%= render 'projects/project', project: project %>
           <% end %>
