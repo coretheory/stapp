@@ -3,6 +3,11 @@ require 'test_helper'
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @project = projects(:sara_project)
+    @project_one_grid_layout = Project.new(user_id:         1,
+                                           title:           "OneGridLayout",
+                                           year:            2020,
+                                           project_type:    "Residential",
+                                           one_grid_layout: true)
   end
 
   test "should get index" do
@@ -17,7 +22,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project" do
     assert_difference('Project.count') do
-      post projects_url, params: { project: {  } }
+      post projects_url, params: { project: @project }
     end
 
     assert_redirected_to project_url(Project.last)
@@ -34,7 +39,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update project" do
-    patch project_url(@project), params: { project: {  } }
+    patch project_url(@project), params: { project: @project }
     assert_redirected_to project_path(@project)
   end
 

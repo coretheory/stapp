@@ -15,7 +15,7 @@
 # gem 'pg'
 #
 default: &default
-  host: 127.0.0.1
+  host: localhost
   adapter: postgresql
   encoding: unicode
   username: <%= Rails.application.credentials.postgresql[:username] %>

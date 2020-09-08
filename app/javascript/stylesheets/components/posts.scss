@@ -13,6 +13,12 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .post-container {
+    column-count: 4;
+  }
+}
+
 .post-item {
   display: inline-block;
   margin: 0 0 0.5em;
