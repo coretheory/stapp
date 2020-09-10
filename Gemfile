@@ -14,16 +14,16 @@ gem 'activestorage-office-previewer', '~> 0.1.2'
 gem "aws-sdk-s3", require: false
 gem 'image_processing', '~> 1.2'
 
-# Authentication & Authorization
-gem 'cancancan', '~> 3.1'
-gem 'devise', '~> 4.7', '>= 4.7.2'
-
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'jbuilder', '~> 2.7'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.2', '>= 5.2.1'
+
+# Authentication & Authorization
+gem 'cancancan', '~> 3.1'
+gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # Cache
 gem 'dalli', '~> 2.7', '>= 2.7.10'
@@ -32,7 +32,7 @@ gem 'dalli', '~> 2.7', '>= 2.7.10'
 gem 'pg', '>= 0.18', '< 2.0'
 
 # Forms
-gem 'country_select', '~> 4.0'
+# gem 'country_select', '~> 4.0'
 
 # Jobs
 gem 'redis', '~> 4.0'
@@ -45,12 +45,12 @@ gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'noticed', '~> 1.2', '>= 1.2.15'
 gem 'turbolinks', '~> 5'
 
-# Server
-gem 'puma', '~> 4.1'
-
 # Security
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
-gem 'devise-pwned_password', '~> 0.1.8'
+gem 'devise-pwned_password', '~> 0.1.9'
+
+# Server
+gem 'puma', '~> 4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,8 +58,12 @@ group :development, :test do
 end
 
 group :development do
-	gem 'brakeman', '~> 4.9'
+  gem 'brakeman', '~> 4.9', '>= 4.9.1'
   gem 'database_consistency', '~> 0.8.4', require: false
+  gem 'listen', '~> 3.2'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end
