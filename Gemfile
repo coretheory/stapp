@@ -58,6 +58,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bundler-audit', '~> 0.7.0.1'
   gem 'brakeman', '~> 4.9', '>= 4.9.1'
   gem 'database_consistency', '~> 0.8.4', require: false
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
