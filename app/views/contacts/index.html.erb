@@ -9,7 +9,7 @@
 			      <%= link_to c, method: :delete, class:"no-underline", data: { confirm: 'Are you sure?' } do %>
 			        <%= render_svg 'icons/trash', title: "Delete", styles: "fill-current text-gray-500 icon-sm" %>
 			      <% end %>
-			      <span class="text-gray-500 text-sm"><%= time_ago_in_words(c.created_at) + ' boo' %></span>
+			      <span class="text-gray-500 text-sm"><%= time_ago_in_words(c.created_at) + ' ago' %></span>
 			    </span>
 			  <% end %>
 			  <%= image_tag("photos/sunset_in_the_mountains.png", alt: "Sunset in the mountains") %>
