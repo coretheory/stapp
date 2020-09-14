@@ -47,6 +47,14 @@
   @apply bg-pink-400 shadow-lg text-white border-pink-400 font-medium;
 }
 
+.btn-outline-black {
+  @apply bg-white text-gray-300 text-title text-sm border border-transparent;
+}
+
+.btn-outline-black:hover {
+  @apply bg-white text-black border border-black;
+}
+
 .btn-white {
   @apply bg-white text-gray-800 py-2 px-4 border border-gray-400 rounded shadow text-paragraph-body;
 }
