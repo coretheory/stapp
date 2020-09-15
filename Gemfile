@@ -39,7 +39,7 @@ gem 'redis', '~> 4.0'
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 
 # Other
-gem 'friendly_id', '~> 5.3'
+gem 'friendly_id', '~> 5.4'
 gem 'meta-tags', '~> 2.13'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
 gem 'noticed', '~> 1.2', '>= 1.2.15'
