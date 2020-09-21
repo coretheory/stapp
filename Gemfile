@@ -36,7 +36,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 # Jobs
 gem 'redis', '~> 4.0'
-gem 'sidekiq', '~> 6.1', '>= 6.1.1'
+gem 'sidekiq', '~> 6.1', '>= 6.1.2'
 
 # Other
 gem 'friendly_id', '~> 5.4'
