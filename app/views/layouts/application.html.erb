@@ -5,14 +5,14 @@
     <%= render "shared/shim" %>
   </head>
 
-  <body class="bg-gray-300" oncontextmenu="return false;">
+  <body class="bg-gray-300">
     <%= render "shared/notices" %>   
     <div class="min-h-screen md:flex">
       <div class="flex-none w-full md:max-w-xs bg-white text-black">
         <%= render "shared/navbar" %>
       </div>
     
-      <div class="flex-1 bg-white pb-12 px-4">
+      <div class="flex-1 bg-white pb-12 px-4" oncontextmenu="return false;">
         <%= content_for?(:content) ? yield(:content) : yield %>
       </div>
       
