@@ -4,6 +4,12 @@ databases:
    user: stapp
 
 services:
+- type: worker
+   name: sidekiq
+   env: ruby
+   buildCommand: "bundle install"
+   startCommand: "bundle exec sidekiq -q default -q mailers -C config/sidekiq.yml"
+   
  - type: web
    name: stapp
    env: ruby
@@ -16,3 +22,5 @@ services:
          property: connectionString
      - key: RAILS_MASTER_KEY
        sync: false
+     - key: REDIS_URL
+         value: "redis://redis-4r66:10000"
