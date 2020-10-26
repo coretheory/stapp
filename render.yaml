@@ -1,6 +1,6 @@
 databases:
  - name: stapp
-   databaseName: stapp
+   databaseName: stapp_production
    user: stapp
 
 services:
