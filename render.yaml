@@ -9,7 +9,10 @@ services:
    env: ruby
    buildCommand: "bundle install"
    startCommand: "bundle exec sidekiq -q default -q mailers -C config/sidekiq.yml"
-   
+   envVars:
+     - key: REDIS_URL
+         value: "redis://redis-4r66:10000"
+
  - type: web
    name: stapp
    env: ruby
