@@ -25,7 +25,7 @@ development:
   <<: *default
   database: stapp_development
   username: postgres
-  password: admin
+  password: postgres
   host: localhost
   port: 5432
 
@@ -63,7 +63,7 @@ test:
   <<: *default
   database: stapp_test
   username: postgres
-  password: admin
+  password: postgres
   host: localhost
   port: 5432
 

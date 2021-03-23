@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0', '>= 6.0.3.4'
+gem 'rails', '~> 6.1', '>= 6.1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -29,7 +29,7 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'dalli', '~> 2.7', '>= 2.7.10'
 
 # Database
-gem 'pg', '>= 0.18', '< 2.0'
+gem 'pg', '~> 1.2', '>= 1.2.3'
 
 # Forms
 # gem 'country_select', '~> 4.0'
