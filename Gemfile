@@ -12,7 +12,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Active Storage
 gem 'activestorage-office-previewer', '~> 0.1.2'
 gem "aws-sdk-s3", require: false
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Assets
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
