@@ -26,7 +26,7 @@ gem 'cancancan', '~> 3.1'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
 # Cache
-gem 'dalli', '~> 2.7', '>= 2.7.10'
+gem 'dalli', '~> 3.2'
 
 # Database
 gem 'pg', '~> 1.2', '>= 1.2.3'
