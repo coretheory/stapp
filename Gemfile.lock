@@ -103,7 +103,7 @@ GEM
     concurrent-ruby (1.1.8)
     connection_pool (2.2.3)
     crass (1.0.6)
-    dalli (2.7.11)
+    dalli (3.2.3)
     database_consistency (0.8.13)
       activerecord (>= 3.2)
     devise (4.7.3)
@@ -308,7 +308,7 @@ DEPENDENCIES
   byebug
   cancancan (~> 3.1)
   capybara (>= 2.15)
-  dalli (~> 2.7, >= 2.7.10)
+  dalli (~> 3.2)
   database_consistency (~> 0.8.4)
   devise (~> 4.7, >= 4.7.2)
   devise-pwned_password (~> 0.1.9)
