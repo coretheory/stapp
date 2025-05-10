@@ -50,7 +50,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 gem 'devise-pwned_password', '~> 0.1.9'
 
 # Server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
